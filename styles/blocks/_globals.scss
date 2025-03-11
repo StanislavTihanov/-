@@ -4,9 +4,9 @@ body.lock {
 }
 body { 
     font-family: var(--font-family-base); 
-    font-size: 16px;
-    font-weight: 400; 
-    color: var(--color-black); 
+    font-size: 17px;
+    font-weight: 700; 
+    color: var(--color-black-text); 
     background: var(--color-white);
 }
 .wrapper {
@@ -52,7 +52,7 @@ body {
     color: var(--color-black);
     line-height: 100%;
 }
-.btn {
+.button {
     display: inline-block;
     padding: 16px 32px;
     border-radius: 30px;
@@ -64,7 +64,7 @@ body {
     font-weight: 700;
     
 }
-.btn-outline {
+.button-outline {
     border: 1px solid var(--color-blue);
     background-color: var(--color-white);
     @include hover {
@@ -75,9 +75,9 @@ body {
         background-color: #496cf8;
     }
 }
-.btn-filled {
-    background-color: var(--color-blue);
-    border: 1px solid var(--color-blue);
+.button-filled {
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-white);
     color: var(--color-white);
     box-shadow: 0 10px 26px 0 rgba(255, 77, 98, 0.2);
     @include hover {

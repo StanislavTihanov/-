@@ -13,7 +13,7 @@
   <meta property="og:image:height" content="500">
   <meta property="og:description" content="эталон">
   <meta property="og:image" content="путь к картинке/image.webp">
-  <title>Эталон</title>
+  <title>НАКФФ Медицинская клиника</title>
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -27,34 +27,59 @@
     <header class="header lock-padding">
       <div class="header__content">
         <div class="header__body">
-          <a class="header__logo" href="index.html" aria-label="логотип">
-            <img src="images/logo.svg" alt="logo">
-          </a>
-          <nav class="menu" id="menu">
+          <div class="header__links">
+            <a class="header__logo" href="index.html" aria-label="логотип">
+              <img src="images/icons/logo.svg" alt="logo">
+            </a>
+            <a class="header__link" href="tel:+74950998882">
+              <img src="images/icons/Call.svg" alt="phone icon">
+              <span>+7 (495) 099-88-82</span>
+            </a>
+          </div>
+          <div class="header__buttons">
+            <div class="search">
+              <div class="search__box">
+                <div class="search__block">
+                  <div class="search__window">
+                    <label class="search__label">
+                      <img src="images/icons/Search.svg" alt="search icon">
+                      <span>Поиск</span>
+                      <input class="search__label_input" type="text">
+                    </label>
+                  </div>
+                </div>
+                <button class="search__btn">
+                  <img src="images/icons/Search.svg" alt="search icon">
+                </button>
+              </div>
+            </div>
+            
+            <div class="burger" aria-label="кнопка открытия меню">
+              <span class="burger__line"></span>
+              <span class="burger__line"></span>
+              <span class="burger__line"></span>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <nav class="menu" aria-label="Основное меню">
             <ul>
               <li>
-                <a class="menu__link" data-goto=".reviews" href="#">Главная</a>
+                <a class="menu__link" data-goto=".reviews" href="#">Врачи</a>
               </li>
               <li>
-                <a class="menu__link" data-goto=".rates" href="#">О нас</a>
+                <a class="menu__link" data-goto=".rates" href="#">Услуги</a>
               </li>
-              <li>
-                <a class="menu__link" data-goto=".about" href="#">Каталог</a>
-              </li>
-              <li>
-                <a class="menu__link" data-goto=".locations" href="#">Контакты</a>
-              </li>
+              <li>Центр онкологии</li>
+              <li>Центр хирургии</li>
+              <li>Диагностика</li>
+              <li>Анализы</li>
+              <li><a class="menu__link" data-goto=".rates" href="#">Акции</a></li>
+              <li>О нас</li>
+              <li><a class="menu__link" data-goto=".rates" href="#">Контакты</a></li>
+              <li><a class="menu__link" data-goto=".rates" href="#">Отзывы</a></li>
             </ul>
           </nav>
-          <div class="header__links">
-            <a class="header__link" href="tel:+777777777776">+7 (777) 777 77-77</a>
-            <a class="header__link" href="mailto:stas89tihanov@gmail.com">stas89tihanov@gmail.com</a>
-          </div>
-          <div class="burger" id="hamb" aria-label="кнопка открытия меню">
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-          </div>
         </div>
       </div>
     </header>

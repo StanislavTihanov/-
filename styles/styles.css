@@ -97,16 +97,30 @@ h1, h2, h3, h4, h5, h6, p, address, cite, span, ul, li {
 /*-----------------------------------обнуляющие стили--------------------------------*/
 /*----------------------------------Шрифты--------------------------------*/
 @font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Regular.woff2") format(woff2);
+  font-family: "Heliosext";
+  src: url("../fonts/heliosext_regular.woff2") format(woff2);
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Bold.woff2") format(woff2);
+  font-family: "Heliosext";
+  src: url("../fonts/heliosext_bold.woff2") format(woff2);
   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Mulish";
+  src: url("../fonts/Mulish-Medium.woff2") format(woff2);
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Mulish";
+  src: url("../fonts/Mulish-SemiBold.woff2") format(woff2);
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -114,14 +128,18 @@ h1, h2, h3, h4, h5, h6, p, address, cite, span, ul, li {
 /*----------------------------------Переменные--------------------------------*/
 :root {
   --color-black: #000000;
+  --color-black-text: #1B1B26;
   --color-white: #FFFFFF;
-  --color-gray: #F3F3F3;
-  --color-blue: #59a6ef;
-  --border: 1px solid var(--color-black);
-  --border-radius: 16px;
-  --border-radius-small: 10px;
-  --shadow: 0px 0px 20px 0px var(--color-black);
-  --font-family-base: "Montserrat", Arial, sans-serif;
+  --color-primary: #00A7AA;
+  --color-primary-hover: #E2F5F6;
+  --color-primary-disabled: #80D3D5;
+  --color-secondary: #F85077;
+  --color-secondary-hover: #FFEEF2;
+  --color-secondary-disabled: #FE8EA8;
+  --border: 1px solid var(--color-primary);
+  --border-radius: 60px;
+  --border-radius-small: 40px;
+  --font-family-base: "Heliosext", Arial, sans-serif;
   --container-width: 1440px;
 }
 
@@ -133,9 +151,9 @@ body.lock {
 
 body {
   font-family: var(--font-family-base);
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--color-black);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-black-text);
   background: var(--color-white);
 }
 
@@ -191,7 +209,7 @@ body {
   line-height: 100%;
 }
 
-.btn {
+.button {
   display: inline-block;
   padding: 16px 32px;
   border-radius: 30px;
@@ -203,32 +221,32 @@ body {
   font-weight: 700;
 }
 
-.btn-outline {
+.button-outline {
   border: 1px solid var(--color-blue);
   background-color: var(--color-white);
 }
 @media (hover: hover) {
-  .btn-outline:hover {
+  .button-outline:hover {
     color: var(--color-white);
     background-color: var(--color-blue);
   }
 }
-.btn-outline:active {
+.button-outline:active {
   background-color: #496cf8;
 }
 
-.btn-filled {
-  background-color: var(--color-blue);
-  border: 1px solid var(--color-blue);
+.button-filled {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-white);
   color: var(--color-white);
   box-shadow: 0 10px 26px 0 rgba(255, 77, 98, 0.2);
 }
 @media (hover: hover) {
-  .btn-filled:hover {
+  .button-filled:hover {
     background-color: var(--collor-white);
   }
 }
-.btn-filled:active {
+.button-filled:active {
   background-color: #496cf8;
 }
 
@@ -245,14 +263,16 @@ body {
 .header__bg .header__content {
   color: var(--color-white);
 }
+.header__content {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
 .header__body {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
   padding: 12px 10px;
-  max-width: var(--container-width);
-  margin: 0 auto;
 }
 .header__logo {
   z-index: 3;
@@ -331,6 +351,7 @@ body {
 .menu ul {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 16px;
 }

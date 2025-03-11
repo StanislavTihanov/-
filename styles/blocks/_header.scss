@@ -9,14 +9,16 @@
             color: var(--color-white);
         }
     }
+    &__content {
+        max-width: var(--container-width);
+        margin: 0 auto;
+    }
     &__body {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 16px;
         padding: 12px 10px;
-        max-width: var(--container-width);
-        margin: 0 auto;
     }
     &__logo {
         z-index: 3; 
