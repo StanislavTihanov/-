@@ -25,7 +25,7 @@
 <body id="body">
   <div class="wrapper">
     <header class="header lock-padding">
-      <div class="header__content">
+      <div class="header__content _container">
         <div class="header__body">
           <div class="header__links">
             <a class="header__logo" href="index.html" aria-label="логотип">
@@ -36,15 +36,14 @@
               <span>+7 (495) 099-88-82</span>
             </a>
           </div>
-          <div class="header__buttons">
+          <div class="header__block">
             <div class="search">
               <div class="search__box">
                 <div class="search__block">
                   <div class="search__window">
                     <label class="search__label">
-                      <img src="images/icons/Search.svg" alt="search icon">
-                      <span>Поиск</span>
-                      <input class="search__label_input" type="text">
+                      <input class="search__label_input" type="text" placeholder="Поиск">
+                      <img class="search__label_close" src="images/icons/Close.svg" alt="close icon">
                     </label>
                   </div>
                 </div>
@@ -53,7 +52,6 @@
                 </button>
               </div>
             </div>
-            
             <div class="burger" aria-label="кнопка открытия меню">
               <span class="burger__line"></span>
               <span class="burger__line"></span>
@@ -70,15 +68,254 @@
               <li>
                 <a class="menu__link" data-goto=".rates" href="#">Услуги</a>
               </li>
-              <li>Центр онкологии</li>
-              <li>Центр хирургии</li>
-              <li>Диагностика</li>
-              <li>Анализы</li>
+              <li class="menu__button">Центр онкологии
+                <ul class="menu__list">
+                  <li>
+                    <a class="menu__link" href="#!">Онкогинекология</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Онкоурология</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Онкодерматология</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Иммунотерапия</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Таргетная терапия при онкологии</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Химиотерапия</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Радиотерапия</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Фотодинамическая терапия</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Паллиативная помощь</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Онкологический консилиум</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Второе мнение в онкологии</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                </ul>
+              </li>
+              <li class="menu__button">Центр хирургии
+                <ul class="menu__list">
+                  <li>
+                    <a class="menu__link" href="#!">Онкогинекология</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Онкоурология</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Онкодерматология</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Иммунотерапия</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Таргетная терапия при онкологии</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Химиотерапия</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Радиотерапия</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Фотодинамическая терапия</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Паллиативная помощь</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Онкологический консилиум</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Второе мнение в онкологии</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                </ul>
+              </li>
+              <li class="menu__button">Диагностика
+                <ul class="menu__list">
+                  <li>
+                    <a class="menu__link" href="#!">Онкогинекология</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Онкоурология</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Онкодерматология</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Иммунотерапия</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Таргетная терапия при онкологии</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Химиотерапия</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Радиотерапия</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Фотодинамическая терапия</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Паллиативная помощь</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Онкологический консилиум</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Второе мнение в онкологии</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                </ul>
+              </li>
+              <li class="menu__button">Анализы
+                <ul class="menu__list">
+                  <li>
+                    <a class="menu__link" href="#!">Онкогинекология</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Онкоурология</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Онкодерматология</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Иммунотерапия</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Таргетная терапия при онкологии</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Химиотерапия</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Радиотерапия</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Фотодинамическая терапия</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Паллиативная помощь</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Онкологический консилиум</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Второе мнение в онкологии</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                </ul>
+              </li>
               <li><a class="menu__link" data-goto=".rates" href="#">Акции</a></li>
-              <li>О нас</li>
+              <li class="menu__button">О нас
+                <ul class="menu__list">
+                  <li>
+                    <a class="menu__link" href="#!">Онкогинекология</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Онкоурология</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Онкодерматология</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Иммунотерапия</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Таргетная терапия при онкологии</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Химиотерапия</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Радиотерапия</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Фотодинамическая терапия</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Паллиативная помощь</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Онкологический консилиум</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                  <li>
+                    <a class="menu__link" href="#!">Второе мнение в онкологии</a>
+                    <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                  </li>
+                </ul>
+              </li>
               <li><a class="menu__link" data-goto=".rates" href="#">Контакты</a></li>
               <li><a class="menu__link" data-goto=".rates" href="#">Отзывы</a></li>
             </ul>
+            <div class="header__buttons">
+              <a class="button button-filled-primary" href="#!">Записаться к врачу</a>
+              <a class="button button-filled-secondary" href="#!">Госпитализация</a>
+            </div>
           </nav>
         </div>
       </div>

@@ -6,19 +6,110 @@
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 16px;
-    }
-    &__link {
-        font-weight: 700;
-        line-height: 120%;
-        text-transform: uppercase;
-        position: relative;
-        @include fluid-text(12, 14);
-        transition: All 0.5s ease 0s;
-        @include hover {
-            color: var(--color-black);
+        li {
+            font-weight: 700;
+            line-height: 138%;
+            position: relative;
+            @include fluid-text(12, 13);
         }
     }
-    @include mobile {
+    &__link {
+        transition: All 0.3s ease 0s;
+        @include hover {
+            color: var(--color-primary);
+        }
+    }
+    &__button {
+        cursor: pointer;
+        padding-right: 15px;
+        transition: All 0.3s ease 0s;
+        &::after,
+        &::before {
+            position: absolute;
+            content: '';
+            width: 6px;
+            height: 2px;
+            top: 50%;
+            right: 0;
+            background-color: var(--color-black-text);
+            transition: transform 0.2s ease-out;
+            border-radius: 5px;
+        }
+        &::after {
+            transform: rotate(45deg);
+            right: 4px;
+        }
+        &::before {
+            transform: rotate(-45deg);
+        }
+        &.open {
+            color: var(--color-primary);
+            &::after {
+                transform: rotate(-45deg);
+                background-color: var(--color-primary);
+            }
+            &::before {
+                transform: rotate(45deg);
+                background-color: var(--color-primary);
+            }
+            li {
+                color: var(--color-black-text);
+            }
+        }
+    }
+    &__list {
+        position: absolute;
+        background-color: var(--color-white);
+        box-shadow: 0 0 16px 0 rgba(17, 31, 57, 0.1);
+        border-radius: 24px;
+        width: 342px;
+        padding: 16px;
+        list-style: circle;
+        top: -100%;
+        left: -20px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+        li {
+            font-family: var(--font-family-m);
+            font-weight: 600;
+            @include fluid-text(12, 15);
+            line-height: 133%;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+            cursor: pointer;
+            position: relative;
+            padding-left: 25px;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 6px;
+                height: 6px;
+                top: 35%;
+                left: 10px;
+                border-radius: 50%;
+                background-color: #63D7DF;
+            }
+            img {
+                width: 20px;
+                opacity: 0;
+                transition: all 0.3s;
+            }
+            @include hover {
+                img {
+                    opacity: 1;
+                }
+            }
+        }
+        &.open {
+            opacity: 1;
+            visibility: visible;
+            top: 35px;
+        }
+    }
+    @include table {
         position: fixed;
         left: 0;
         top: -100%;
@@ -39,7 +130,6 @@
             display: block;
             text-align: center;
             position: relative;
-            color: var(--color-white);
         }
         ul li {
             margin-bottom: 20px;

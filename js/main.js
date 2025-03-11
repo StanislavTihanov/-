@@ -56,26 +56,80 @@ window.addEventListener('scroll', () => {
 
 
 //------------------------------------------------------------------------search
-//const searchButtons = document.querySelectorAll('.search__btn');
-//const searchWindows = document.querySelectorAll('.search__window');
-//
-//searchButtons.forEach((searchBtn, index) => {
-//  const searchWindow = searchWindows[index]; // Привязываем соответствующее окно к каждой кнопке
-//
-//  searchBtn.addEventListener("click", function (e) {
-//    e.stopPropagation();
-//    searchWindow.classList.toggle('_act'); // Открываем/закрываем конкретное окно поиска
-//  });
-//
-//  document.addEventListener("click", function (e) {
-//    if (!searchBtn.contains(e.target) && !searchWindow.contains(e.target)) {
-//      searchWindow.classList.remove('_act'); // Закрываем окно, если клик вне кнопки или окна
-//    }
-//  });
-//});
+const searchButtons = document.querySelectorAll('.search__btn');
+const searchWindows = document.querySelectorAll('.search__window');
+const searchCloseButtons = document.querySelectorAll('.search__label_close');
 
+searchButtons.forEach((searchBtn, index) => {
+  const searchWindow = searchWindows[index]; // Привязываем соответствующее окно к каждой кнопке
+  const searchClose = searchCloseButtons[index]; // Привязываем соответствующую кнопку закрытия
+  const searchInput = searchWindow.querySelector('.search__label_input'); // Находим поле ввода внутри окна
+
+  // Открытие/закрытие окна при клике на кнопку поиска
+  searchBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    searchWindow.classList.toggle('_act'); // Открываем/закрываем конкретное окно поиска
+  });
+
+  // Закрытие окна при клике на кнопку закрытия
+  searchClose.addEventListener("click", function (e) {
+    e.stopPropagation();
+    searchWindow.classList.remove('_act'); // Закрываем окно при клике на кнопку закрытия
+  });
+
+  // Закрытие окна при клике вне его области
+  document.addEventListener("click", function (e) {
+    if (!searchBtn.contains(e.target) && !searchWindow.contains(e.target)) {
+      searchWindow.classList.remove('_act'); // Закрываем окно, если клик вне кнопки или окна
+    }
+  });
+
+  // Изменение цвета бордера при вводе текста
+  searchInput.addEventListener('input', function () {
+    if (this.value.trim() !== '') {
+      searchWindow.classList.add('search__window--active'); // Добавляем класс, если поле не пустое
+    } else {
+      searchWindow.classList.remove('search__window--active'); // Убираем класс, если поле пустое
+    }
+  });
+});
 //------------------------------------------------------------------------search
 
+const menuButtons = document.querySelectorAll('.menu__button');
+const menuLists = document.querySelectorAll('.menu__list');
+
+// Функция для закрытия всех списков
+const closeAllMenus = () => {
+  menuLists.forEach(list => list.classList.remove('open'));
+  menuButtons.forEach(button => button.classList.remove('open'));
+};
+
+// Обработчик клика на кнопки
+menuButtons.forEach((button, index) => {
+  button.addEventListener('click', (event) => {
+    event.stopPropagation(); // Останавливаем всплытие, чтобы не сработал document.click
+    const isOpen = menuLists[index].classList.contains('open');
+
+    // Закрываем все меню перед открытием текущего
+    closeAllMenus();
+
+    // Открываем текущее меню, если оно было закрыто
+    if (!isOpen) {
+      menuLists[index].classList.add('open');
+      button.classList.add('open');
+    }
+  });
+});
+
+// Обработчик клика на документ
+document.addEventListener('click', (event) => {
+  const isClickInsideMenu = event.target.closest('.menu__list') || event.target.closest('.menu__button');
+
+  // Если клик был вне меню и кнопки, закрываем все меню
+  if (!isClickInsideMenu) {
+    closeAllMenus();
+  }
+});
 
 
 
