@@ -1,0 +1,113 @@
+/*----------------------------------promotions-------------------------------*/
+.promotions {
+    margin-top: 220px;
+    &__slide {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px 33px;
+        overflow: hidden;
+        color: var(--color-white);
+        position: relative;
+        border-radius: var(--border-radius-small);
+        span {
+            @include fluid-text(72, 148);
+            line-height: 59%;
+            letter-spacing: -0.03em;
+            display: block;
+            @include mobile {
+                margin-bottom: 20px;
+            }
+        }
+        p {
+            flex-basis: 100px;
+            @include fluid-text(17, 32);
+            line-height: 120%;
+        }
+        &_inner {
+            span {
+                margin-bottom: 20px;
+                @include fluid-text(72, 88);
+            }
+            p {
+                @include fluid-text(17, 20);
+                max-width: 250px;
+            }
+        }
+        &_1 {
+            padding: 74px;
+            background-color: #6196E5;
+            border-radius: var(--border-radius);
+            color: var(--color-white);
+            flex-basis: 100%;
+            img {
+                margin: -74px 0px -74px -50px;
+                @include mobile {
+                    position: absolute;
+                    margin: 0px;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+            @include table {
+                border-radius: var(--border-radius-small);
+            }
+        }
+        &_2 {
+            padding: 82px 60px;
+            background-color: #82D7DC;
+            border-top-right-radius: 170px;
+            border-bottom-right-radius: 20px;
+            flex-basis: 49%;
+            img {
+                border: 1px solid var(--color-white);
+                border-radius: 200px 200px 20px 200px;
+                position: absolute;
+                right: 0;
+            }
+            @include table {
+                flex-basis: 100%;
+                border-top-right-radius: var(--border-radius-small);
+                img {
+                    border-radius: 200px 200px 50px 200px;
+                    width: 198px;
+                }
+            }
+        }
+        &_3 {
+            flex-basis: 49%;
+            background-color: #8FD2F1;
+            padding: 82px 60px;
+            border-bottom-right-radius: 170px;
+            border-top-right-radius: 20px;
+            img {
+                border: 1px solid var(--color-white);
+                border-radius: 200px 20px 200px 200px;
+                position: absolute;
+                right: 0;
+            }
+            @include table {
+                flex-basis: 100%;
+                border-bottom-right-radius: var(--border-radius-small);
+                img {
+                    width: 198px;
+                }
+            }
+        }
+        @include table {
+            padding: 50px 24px;
+        }
+        @include mobile {
+            display: block;
+            min-height: 343px;
+        }
+    }
+}
+/*----------------------------------promotions--------------------------------*/

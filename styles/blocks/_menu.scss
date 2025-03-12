@@ -1,6 +1,6 @@
 /*----------------------------------menu--------------------------------*/
 .menu {
-    ul {
+    &>ul {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -11,6 +11,12 @@
             line-height: 138%;
             position: relative;
             @include fluid-text(12, 13);
+            @include hover {
+                .menu__list_wrapper {
+                    display: block;
+                    left: -20px;
+                }
+            }
         }
     }
     &__link {
@@ -29,7 +35,7 @@
             content: '';
             width: 6px;
             height: 2px;
-            top: 50%;
+            top: 8px;
             right: 0;
             background-color: var(--color-black-text);
             transition: transform 0.2s ease-out;
@@ -42,7 +48,7 @@
         &::before {
             transform: rotate(-45deg);
         }
-        &.open {
+        @include hover {
             color: var(--color-primary);
             &::after {
                 transform: rotate(-45deg);
@@ -56,20 +62,34 @@
                 color: var(--color-black-text);
             }
         }
+        @include table {
+            padding-right: 30px;
+        }
     }
     &__list {
-        position: absolute;
+        &_wrapper {
+            position: absolute;
+            display: none;
+            @include table {
+                &.open {
+                    display: block;
+                    position: static;
+                }
+            }
+        }
         background-color: var(--color-white);
         box-shadow: 0 0 16px 0 rgba(17, 31, 57, 0.1);
         border-radius: 24px;
-        width: 342px;
+        width: 320px;
         padding: 16px;
-        list-style: circle;
-        top: -100%;
-        left: -20px;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s;
+        margin-top: 20px;
+        @include table {
+            position: static;
+            width: 100%;
+            padding: 10px;
+            border-radius: 16px;
+            margin-top: 10px;
+        }
         li {
             font-family: var(--font-family-m);
             font-weight: 600;
@@ -82,6 +102,9 @@
             cursor: pointer;
             position: relative;
             padding-left: 25px;
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
             &::before {
                 position: absolute;
                 content: '';
@@ -103,11 +126,6 @@
                 }
             }
         }
-        &.open {
-            opacity: 1;
-            visibility: visible;
-            top: 35px;
-        }
     }
     @include table {
         position: fixed;
@@ -116,7 +134,7 @@
         width: 100%;
         height: 100%;
         background: blueviolet;
-        padding: 100px 30px 30px 30px; 
+        padding: 50px 20px; 
         transition: All 0.5s ease 0s;
         overflow: auto;
         z-index: 9;
@@ -126,13 +144,15 @@
         &__list-item:not(:last-child){
             margin-bottom: 32px;
         }
-        ul {
+        &>ul {
             display: block;
-            text-align: center;
             position: relative;
+            margin-bottom: 20px;
         }
         ul li {
-            margin-bottom: 20px;
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
         }
     }
 }

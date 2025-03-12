@@ -96,7 +96,7 @@ searchButtons.forEach((searchBtn, index) => {
 //------------------------------------------------------------------------search
 
 const menuButtons = document.querySelectorAll('.menu__button');
-const menuLists = document.querySelectorAll('.menu__list');
+const menuLists = document.querySelectorAll('.menu__list_wrapper');
 
 // Функция для закрытия всех списков
 const closeAllMenus = () => {
@@ -222,50 +222,54 @@ document.addEventListener ('click', (e) => {
 
 //-----------------------------------------------------------------------сортировка по атрибутам
 
-//class FilterGallery {
-//  
-//  constructor() {
-//    // Находим элементы меню и контейнер с постами
-//    this.filterMenuList = document.querySelectorAll('.filtermenu__list li');
-//    this.container = document.querySelector('.filtermenu__container');
-//    this.posts = Array.from(this.container.querySelectorAll('.post'));  // Собираем все посты один раз в массив
-//    
-//    this.updateMenu('all');
-//    this.filterMenuList.forEach(item => item.addEventListener('click', (event) => this.onClickFilterMenu(event)));
-//  }
-//
-//  onClickFilterMenu(event) {
-//    const target = event.target.closest('li');  // Используем closest чтобы найти li
-//    const targetFilter = target.getAttribute('data-filter');
-//
-//    this.updateMenu(targetFilter);
-//    this.updateGallery(targetFilter);
-//  }
-//
-//  updateMenu(targetFilter) {
-//    this.filterMenuList.forEach(item => item.classList.remove('active_'));
-//    const activeItem = Array.from(this.filterMenuList).find(item => item.getAttribute('data-filter') === targetFilter);
-//    if (activeItem) activeItem.classList.add('active_');
-//  }
-//
-//  updateGallery(targetFilter) {
-//    // Оптимизация через фильтрацию всех постов разом
-//    const postsToShow = targetFilter === 'all'
-//      ? this.posts
-//      : this.posts.filter(post => post.classList.contains(targetFilter));
-//    
-//    const postsToHide = this.posts.filter(post => !postsToShow.includes(post));
-//
-//    // Анимация скрытия и показа
-//    this.container.style.opacity = 0;
-//    setTimeout(() => {
-//      postsToHide.forEach(post => post.style.display = 'none');
-//      postsToShow.forEach(post => post.style.display = '');
-//      this.container.style.opacity = 1;
-//    }, 300);
-//  }
-//}
-//const filterGallery = new FilterGallery();
+class FilterGallery {
+  
+  constructor() {
+    // Находим элементы меню и контейнер с постами
+    this.filterMenuList = document.querySelectorAll('.filtermenu__list li');
+    this.container = document.querySelector('.filtermenu__container');
+    this.posts = Array.from(this.container.querySelectorAll('.post'));  // Собираем все посты один раз в массив
+    
+    // По умолчанию показываем блок с классом surgery
+    this.updateMenu('filtermenu__title_1');
+    this.updateGallery('filtermenu__title_1');
+    
+    this.filterMenuList.forEach(item => item.addEventListener('click', (event) => this.onClickFilterMenu(event)));
+  }
+
+  onClickFilterMenu(event) {
+    const target = event.target.closest('li');  // Используем closest чтобы найти li
+    const targetFilter = target.getAttribute('data-filter');
+
+    this.updateMenu(targetFilter);
+    this.updateGallery(targetFilter);
+  }
+
+  updateMenu(targetFilter) {
+    this.filterMenuList.forEach(item => item.classList.remove('active_'));
+    const activeItem = Array.from(this.filterMenuList).find(item => item.getAttribute('data-filter') === targetFilter);
+    if (activeItem) activeItem.classList.add('active_');
+  }
+
+  updateGallery(targetFilter) {
+    // Оптимизация через фильтрацию всех постов разом
+    const postsToShow = targetFilter === 'all'
+      ? this.posts
+      : this.posts.filter(post => post.classList.contains(targetFilter));
+    
+    const postsToHide = this.posts.filter(post => !postsToShow.includes(post));
+
+    // Анимация скрытия и показа
+    this.container.style.opacity = 0;
+    setTimeout(() => {
+      postsToHide.forEach(post => post.style.display = 'none');
+      postsToShow.forEach(post => post.style.display = '');
+      this.container.style.opacity = 1;
+    }, 300);
+  }
+}
+
+const filterGallery = new FilterGallery();
 
 
 //-----------------------------------------------------------------------сортировка по атрибутам

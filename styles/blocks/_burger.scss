@@ -27,8 +27,9 @@
                     top: 50%;
                 }
                 &:last-child {
-                    left: 50%;
+                    left: 60%;
                     top: 75%;
+                    width: 10px;
                 }
             }
             &._active .burger__line:nth-child(2){
@@ -43,6 +44,7 @@
                 transform: rotate(45deg);
                 left: 30%;
                 top: 50%;
+                width: 21px;
         }
     }
 }
