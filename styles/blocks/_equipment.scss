@@ -1,0 +1,67 @@
+/*----------------------------------equipment--------------------------------*/
+
+.equipment {
+    &__block {
+        background-color: var(--color-white);
+        padding: 24px 35px 70px 40px;
+        border-radius: var(--border-radius-small);
+        position: relative;
+        box-shadow: 0 0 16px 0 rgba(163, 214, 225, 0.2);
+        overflow: hidden; // Добавляем, чтобы скрыть выходящие за пределы элементы
+    
+        &_corner {
+          position: absolute;
+          width: 190px;
+          height: 100px;
+          top: -35px;
+          right: 0;
+          background-color: var(--color-bg);
+          border-bottom-left-radius: 40px;
+
+    
+          &::before {
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 50px;
+            top: 0;
+            left: 0px;
+            background-color: var(--color-bg);
+            border-radius: 0 0 40px 0;
+            transform: rotate(45deg);
+          }
+    
+          &::after {
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 50px;
+            bottom: 0;
+            right: 0px;
+            background-color: var(--color-white);
+            border-radius: 40px 0 0 0; 
+            transform: rotate(68deg);
+          }
+        }
+      }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__item {
+    }
+
+    &__button {
+    }
+}
+.title {
+}
+.button {
+}
+
+
+/*----------------------------------equipment--------------------------------*/

@@ -4,7 +4,7 @@ body.lock {
 }
 body { 
     font-family: var(--font-family-base); 
-    font-size: 17px;
+    @include fluid-text(14, 17);
     font-weight: 700; 
     color: var(--color-black-text); 
     background: var(--color-white);
@@ -21,10 +21,13 @@ body {
 ._container {
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0px 10px;
+    padding: 0px 16px;
 }
 section {
     padding: 64px 0px;
+    @include mobile {
+        padding: 30px 0px;
+    }
 }
 .section-color {
     background-color: var(--color-bg);
@@ -42,9 +45,13 @@ section {
 }
 .title {
     @include fluid-text(26, 40);
-    line-height: 100%;
+    line-height: 130%;
     color: var(--color-black);
     margin-bottom: 32px;
+    &--mod {
+        color: var(--color-white);
+        margin-bottom: 24px;
+    }
 }
 .subtitle {
     @include fluid-text(18, 32);
@@ -57,8 +64,10 @@ section {
     line-height: 100%;
 }
 .button {
-    display: inline-block;
-    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 11px 24px;
     border-radius: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -66,6 +75,9 @@ section {
     text-align: center;
     @include fluid-text(12, 13);
     white-space: nowrap;
+    @include mobile {
+        justify-content: center;
+    }
 }
 .button-outline {
     border: 1px solid var(--color-primary);
@@ -87,6 +99,9 @@ section {
             opacity: 0.5;
         }
     }
+    @include mobile {
+        justify-content: center;
+    }
 }
 .button-filled-primary {
     background-color: var(--color-primary);
@@ -94,10 +109,17 @@ section {
     @include hover {
         background-color: var(--color-primary-hover);
         color: var(--color-primary);
+        svg path {
+            stroke: var(--color-primary);
+            transition: all 0.3s ease;
+        }
     }
     &:active {
         background-color: var(--color-primary-disabled);
         color: var(--color-white);
+        svg path {
+            stroke: var(--color-white);
+        }
     }
 }
 .button-filled-secondary {
@@ -112,6 +134,27 @@ section {
         color: var(--color-white);
     }
 }
+.button-white {
+    background-color: var(--color-white);
+    color: var(--color-black-text);
+    border: 1px solid var(--color-white);
+    @include hover {
+        color: var(--color-white);
+        background-color: rgba(255, 255, 255, 0.1);
+        svg path {
+            stroke: var(--color-white);
+            transition: all 0.3s ease;
+        }
+    }
+    &:active {
+        background-color: rgba(255, 255, 255, 0.5);
+        color: var(--color-primary);
+        svg path {
+            stroke: var(--color-primary);
+            transition: all 0.3s ease;
+        }
+    }
+}
 .right__button {
     justify-self: end;
     .button {
@@ -119,6 +162,34 @@ section {
     }
     @include mobile {
         float: none;
+    }
+}
+.video {
+    height: 100%;
+    width: 100%;
+    p {
+        font-weight: 600;
+        font-family: var(--font-family-m);
+        line-height: 141%;
+        padding: 16px;
+    }
+    &__link {
+        position: relative;
+        display: inline-block;
+        &_play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border: 1px solid var(--color-white);
+            padding: 22px;
+        }
+        img {
+            border-radius: 24px;
+            width: 100%;
+        }
     }
 }
 

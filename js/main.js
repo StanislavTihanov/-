@@ -187,36 +187,56 @@ document.addEventListener ('click', (e) => {
 //------------------------------------------------------------------------Прокрутка при клике
 
 //------------------------------------------------------------------------Слайдер
-//const mainSlider = document.querySelector('.main-slider');
-//if (mainSlider) {
-//  new Swiper(mainSlider, {
-//    direction: 'horizontal',
-//    loop: true,
-//    slidesPerView: 3,
-//    spaceBetween: 20,
-//    speed: 1000,
-//    autoHeight: false,
-//    navigation: {
-//      nextEl: '.swiper-button-next',
-//      prevEl: '.swiper-button-prev',
-//    },
-//    pagination: {
-//      el: '.swiper-pagination',
-//      clickable: true,
-//    },
-//    breakpoints: {
-//      320: {
-//        slidesPerView: 1,
-//      },
-//      640: {
-//        slidesPerView: 2,
-//      },
-//      980: {
-//        slidesPerView: 3,
-//      }
-//    }
-//  });
-//}
+const expertsSlider = document.querySelector('.experts-slider');
+if (expertsSlider) {
+  new Swiper(expertsSlider, {
+    direction: 'horizontal',
+    loop: false,
+    spaceBetween: 10,
+    speed: 1000,
+    autoHeight: false,
+    navigation: {
+      prevEl: '.swiper-button-prev-1',
+      nextEl: '.swiper-button-next-1',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.2,
+      },
+      640: {
+        slidesPerView: 1.7,
+      },
+      980: {
+        slidesPerView: 2,
+      }
+    }
+  });
+}
+const doctorsSlider = document.querySelector('.doctors-slider');
+if (doctorsSlider) {
+  new Swiper(doctorsSlider, {
+    direction: 'horizontal',
+    loop: false,
+    spaceBetween: 10,
+    speed: 1000,
+    autoHeight: false,
+    navigation: {
+      prevEl: '.swiper-button-prev-2',
+      nextEl: '.swiper-button-next-2',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.2,
+      },
+      640: {
+        slidesPerView: 2,
+      },
+      980: {
+        slidesPerView: 3,
+      }
+    }
+  });
+}
 //------------------------------------------------------------------------Слайдер
 
 
@@ -273,6 +293,38 @@ const filterGallery = new FilterGallery();
 
 
 //-----------------------------------------------------------------------сортировка по атрибутам
+
+//-----------------------------------------------------------------------кон для анимации иконак в блоке ваше здоровье
+document.addEventListener('mousemove', (e) => {
+  const icons = document.querySelectorAll('.mission__icon');
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+
+  icons.forEach((icon, index) => {
+    const rect = icon.getBoundingClientRect();
+    const iconX = rect.left + rect.width / 2;
+    const iconY = rect.top + rect.height / 2;
+
+    const deltaX = mouseX - iconX;
+    const deltaY = mouseY - iconY;
+
+    // Настройте силу смещения (можно регулировать)
+    const strength = 0.03;
+
+    // Применяем смещение в зависимости от положения курсора
+    const translateX = deltaX * strength;
+    const translateY = deltaY * strength;
+
+    // Добавляем разные направления для каждой иконки
+    if (index % 2 === 0) {
+      icon.style.transform = `translate(${translateX}px, ${translateY}px)`;
+    } else {
+      icon.style.transform = `translate(${-translateX}px, ${-translateY}px)`;
+    }
+  });
+});
+//-----------------------------------------------------------------------кон для анимации иконак в блоке ваше здоровье
+
 
 //------------------------------------------------------------------------select выпадающий список
 //document.querySelectorAll('.dropdown').forEach(function(dropDownWrapper) {

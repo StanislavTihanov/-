@@ -1,38 +1,42 @@
 /*---------------------------------------sliders----------------------------*/
-.slider {
+.experts-slider,
+.doctors-slider {
   overflow: hidden;
+}
+.slider__wrap {
   position: relative;
-  padding-bottom: 64px;
-  padding: 0px 20px 40px 20px;
+  @include mobile {
+    margin-bottom: 20px;
+  }
 }
-/*---------------------------------------параметры чтобы слайды имели одинаковую высоту----------------------------*/
-.swiper-wrapper {
-  display: flex;
-  align-items: stretch;
+
+.slider__buttons {
+  width: 120px;
+  position: absolute;
+  top: -60px;
+  right: 0;
+  @include mobile {
+    display: none;
+  }
 }
-.swiper-slide {
-  height: auto;
-  transition: all 0.5s ease;
+.slider__wrap .swiper-button-next,
+.slider__wrap .swiper-button-prev {
+  top: 0;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black-text);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
 }
-/*---------------------------------------параметры чтобы слайды имели одинаковую высоту----------------------------*/
-.swiper-button-next,
-.swiper-button-prev {
-  top: 50%;
+.slider__wrap .swiper-button-next {
+  right: 0;
 }
-.swiper-button-next {
-  right: 16px;
-}
-.swiper-button-prev {
-  left: 16px;
+.slider__wrap .swiper-button-prev {
+  transform: rotate(180deg);
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-size: 20px;
-  color: var(--color-white);
-  border: 1px solid var(--color-white);
-  padding: 16px 20px;
-  border-radius: 16px;
-  background-color: var(--color-black);
+   display: none;
 }
 .swiper-pagination-bullet {
   opacity: 1;
