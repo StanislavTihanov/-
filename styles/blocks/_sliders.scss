@@ -1,7 +1,21 @@
 /*---------------------------------------sliders----------------------------*/
-.experts-slider,
-.doctors-slider {
+.two-slide,
+.slider,
+.one-slide {
   overflow: hidden;
+}
+.slider {
+  .partners__slide {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include table {
+      img {
+        max-width: 130px;
+        width: 100%;
+      }
+    }
+  }
 }
 .slider__wrap {
   position: relative;
@@ -9,7 +23,13 @@
     margin-bottom: 20px;
   }
 }
-
+.equipment-slider .swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+.equipment-slider .swiper-slide {
+  height: auto;
+}
 .slider__buttons {
   width: 120px;
   position: absolute;

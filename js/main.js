@@ -186,43 +186,24 @@ document.addEventListener ('click', (e) => {
 //}
 //------------------------------------------------------------------------Прокрутка при клике
 
-//------------------------------------------------------------------------Слайдер
-const expertsSlider = document.querySelector('.experts-slider');
-if (expertsSlider) {
-  new Swiper(expertsSlider, {
+//------------------------------------------------------------------------Слайдеры
+// Находим все слайдеры на странице
+const sliders = document.querySelectorAll('.slider');
+sliders.forEach((slider, index) => {
+  // Создаем уникальные классы для навигации каждого слайдера
+  const prevButton = `.swiper-button-prev-${index + 1}`;
+  const nextButton = `.swiper-button-next-${index + 1}`;
+
+  // Инициализируем Swiper для каждого слайдера
+  new Swiper(slider, {
     direction: 'horizontal',
     loop: false,
     spaceBetween: 10,
     speed: 1000,
     autoHeight: false,
     navigation: {
-      prevEl: '.swiper-button-prev-1',
-      nextEl: '.swiper-button-next-1',
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1.2,
-      },
-      640: {
-        slidesPerView: 1.7,
-      },
-      980: {
-        slidesPerView: 2,
-      }
-    }
-  });
-}
-const doctorsSlider = document.querySelector('.doctors-slider');
-if (doctorsSlider) {
-  new Swiper(doctorsSlider, {
-    direction: 'horizontal',
-    loop: false,
-    spaceBetween: 10,
-    speed: 1000,
-    autoHeight: false,
-    navigation: {
-      prevEl: '.swiper-button-prev-2',
-      nextEl: '.swiper-button-next-2',
+      prevEl: prevButton,
+      nextEl: nextButton,
     },
     breakpoints: {
       320: {
@@ -236,8 +217,59 @@ if (doctorsSlider) {
       }
     }
   });
-}
-//------------------------------------------------------------------------Слайдер
+});
+
+const twoSlide = document.querySelectorAll('.two-slide');
+twoSlide.forEach((twoSlide, index) => {
+  // Создаем уникальные классы для навигации каждого слайдера
+  const prevButton = `.swiper-button-p-${index + 1}`;
+  const nextButton = `.swiper-button-n-${index + 1}`;
+
+  // Инициализируем Swiper для каждого слайдера
+  new Swiper(twoSlide, {
+    direction: 'horizontal',
+    loop: false,
+    spaceBetween: 24,
+    speed: 1000,
+    autoHeight: false,
+    navigation: {
+      prevEl: prevButton,
+      nextEl: nextButton,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.1,
+      },
+      640: {
+        slidesPerView: 1,
+      },
+      980: {
+        slidesPerView: 2,
+      }
+    }
+  });
+});
+const oneSlide = document.querySelectorAll('.one-slide');
+oneSlide.forEach((oneSlide, index) => {
+  // Создаем уникальные классы для навигации каждого слайдера
+  const prevButton = `.swiper-button-pr-${index + 1}`;
+  const nextButton = `.swiper-button-nx-${index + 1}`;
+
+  // Инициализируем Swiper для каждого слайдера
+  new Swiper(oneSlide, {
+    direction: 'horizontal',
+    loop: false,
+    spaceBetween: 20,
+    speed: 1000,
+    autoHeight: false,
+    slidesPerView: 1,
+    navigation: {
+      prevEl: prevButton,
+      nextEl: nextButton,
+    },
+  });
+});
+//------------------------------------------------------------------------Слайдеры
 
 
 //-----------------------------------------------------------------------сортировка по атрибутам

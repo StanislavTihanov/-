@@ -66,7 +66,8 @@ section {
 .button {
     display: flex;
     align-items: center;
-    gap: 16px;
+    justify-content: center;
+    gap: 7px;
     padding: 11px 24px;
     border-radius: 16px;
     cursor: pointer;
@@ -75,19 +76,12 @@ section {
     text-align: center;
     @include fluid-text(12, 13);
     white-space: nowrap;
-    @include mobile {
-        justify-content: center;
-    }
 }
 .button-outline {
     border: 1px solid var(--color-primary);
     background-color: var(--color-white);
     border-radius: var(--border-radius-small);
     color: var(--color-primary);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 7px;
     @include hover {
         background-color: var(--color-primary-hover);
     }
@@ -172,6 +166,9 @@ section {
         font-family: var(--font-family-m);
         line-height: 141%;
         padding: 16px;
+        span {
+            color: var(--color-primary);
+        }
     }
     &__link {
         position: relative;
@@ -187,8 +184,8 @@ section {
             padding: 22px;
         }
         img {
-            border-radius: 24px;
             width: 100%;
+            border-radius: 24px;
         }
     }
 }

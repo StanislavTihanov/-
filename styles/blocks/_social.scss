@@ -1,0 +1,71 @@
+/*----------------------------------social--------------------------------*/
+
+.social {
+    &__body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px 70px;
+        background: linear-gradient(131deg, #1d90ef 0%, #7b5fe3 100%); 
+        border-radius: var(--border-radius);
+        padding: 20px 20px 0px 20px;
+        @include table {
+            border-radius: 32px;
+            flex-wrap: wrap;
+        }
+        @include mobile {
+            padding: 24px 16px 0px 16px;
+        }
+    }
+    &__info {
+        color: var(--color-white);
+        flex-basis: 835px;
+        margin-bottom: 10px;
+        p {
+            font-weight: 600;
+            line-height: 141%;
+            font-family: var(--font-family-m);
+            max-width: 700px;
+            margin-bottom: 42px;
+            @include mobile {
+                margin-bottom: 16px;
+            }
+        }
+    }
+    &__links {
+        display: flex;
+        align-items: stretch;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 7px;
+        font-size: 13px;
+        background-color: var(--color-white);
+        padding: 14px;
+        color: var(--color-black-text);
+        border-radius: 16px;
+        @include mobile {
+            padding: 8px;
+            border-radius: 12px;
+        }
+    }
+
+    &__photo {
+        margin-top: -65px;
+        @include table {
+            margin-top: -20px;
+        }
+        @include mobile {
+            max-width: 170px;
+            margin-top: -80px;
+            margin-left: auto;
+        }
+    }
+}
+
+
+/*----------------------------------social--------------------------------*/
