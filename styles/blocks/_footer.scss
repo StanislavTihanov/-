@@ -10,6 +10,12 @@
         display: flex;
         justify-content: space-between;
         gap: 10px;
+        @include table {
+            flex-wrap: wrap;
+        }
+        @include mobile {
+            display: block;
+        }
     }
     &__block {
         p,
@@ -32,6 +38,37 @@
     }
     &__title {
         margin-bottom: 16px;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 3px;
+            top: 50%;
+            right: -20px;
+            background-color: var(--color-black-text);
+            transform: rotate(45deg);
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 3px;
+            top: 50%;
+            right: -27px;
+            background-color: var(--color-black-text);
+            transform: rotate(-45deg);
+        }
+        &.view {
+            &::after {
+                transform: rotate(-45deg);
+            }
+            &::before {
+                transform: rotate(45deg);
+            }
+        }
     }
     &__list {
         li {
@@ -45,6 +82,12 @@
                 color: var(--color-primary);
             }
         }
+        @include mobile {
+            display: none;
+            &.view {
+                display: block;
+            }
+        }
     }
     &__tel {
        margin-bottom: 24px;
@@ -55,7 +98,7 @@
     &__row {
         display: flex;
         justify-content: space-between;
-        gap: 10px;
+        gap: 16px 50px;
         address {
             max-width: 210px;
         }
@@ -66,13 +109,24 @@
             font-family: var(--font-family-m);
             line-height: 130%;
             @include fluid-text(13, 15);
+        }
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+        @include mobile {
+            flex-wrap: wrap;
+        }
+        &--mod {
+            address {
+                img {
+                    width: 18px;
+                    height: 20px;
+                }
+            }
             img {
                 width: 20px;
                 height: 18px;
             }
-        }
-        &:not(:last-child) {
-            margin-bottom: 24px;
         }
     }
     &__box {
@@ -87,7 +141,69 @@
     }
 
     &__bottom {
-        padding: 40px 0px;
+        padding: 40px 16px;
+        display: flex;
+        gap: 16px 40px;
+        @include mobile {
+            flex-wrap: wrap;
+        }
+    }
+    &__requisites {
+        flex-basis: 400px;
+        border-right: 1px solid var(--color-bg);
+        padding-right: 40px;
+        @include mobile {
+            padding-right: 0px;
+            border-right: none;
+            border-bottom: 1px solid var(--color-bg);
+            padding-bottom: 16px;
+        }
+        h3 {
+            margin-bottom: 10px;
+        }
+        p,
+        address {
+            font-weight: 600;
+            font-family: var(--font-family-m);
+            line-height: 130%;
+        }
+        &_info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 16px;
+            @include table {
+                flex-wrap: wrap;
+            }
+        }
+    }
+    &__license {
+        font-weight: 600;
+        font-family: var(--font-family-m);
+        line-height: 130%;
+        flex-basis: 1000px;
+        p {
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+    &__info {
+        font-weight: 600;
+        font-family: var(--font-family-m);
+        line-height: 130%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px 24px;
+        p {
+            &:first-child {
+                text-transform: uppercase;
+            }
+        }
+        @include mobile {
+            flex-wrap: wrap;
+        }
     }
 }
 

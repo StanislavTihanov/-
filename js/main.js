@@ -153,6 +153,36 @@ document.addEventListener ('click', (e) => {
 })
 //------------------------------------------------------------------------закрытие меню при клике вне его
 
+//----------------------------------------------------------------------код для открытия меню в футере
+const footerTitles = document.querySelectorAll('.footer__title');
+
+footerTitles.forEach(title => {
+    title.addEventListener('click', () => {
+        // Находим соответствующий элемент .footer__list
+        const footerList = title.nextElementSibling;
+
+        // Проверяем, что следующий элемент существует и имеет класс .footer__list
+        if (footerList && footerList.classList.contains('footer__list')) {
+            // Переключаем класс 'view' у .footer__title и .footer__list
+            title.classList.toggle('view');
+            footerList.classList.toggle('view');
+        }
+    });
+});
+//----------------------------------------------------------------------код для открытия меню в футере
+
+
+//------------------------------------------------------------------------Fancybox
+document.addEventListener("DOMContentLoaded", function () {
+  if (typeof Fancybox !== "undefined" && typeof Fancybox.bind === "function") {
+      Fancybox.bind("[data-fancybox]", {
+          // Кастомные опции
+      });
+  }
+});
+//------------------------------------------------------------------------Fancybox
+
+
 
 //------------------------------------------------------------------------Прокрутка при клике
 //let buttons = document.querySelectorAll('.menu__link');

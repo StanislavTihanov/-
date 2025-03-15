@@ -17,8 +17,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <link rel="stylesheet" href="./styles/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+  <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body id="body">
   <div class="wrapper">
@@ -882,7 +883,7 @@
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="video">
-                        <a class="video__link" href="#!">
+                        <a class="video__link" href="images/Premiere.mp4" data-fancybox>
                           <img src="images/experts-img1.webp" alt="image for video">
                           <div class="video__link_play">
                             <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -895,7 +896,7 @@
                     </div>
                     <div class="swiper-slide">
                       <div class="video">
-                        <a class="video__link" href="#!">
+                        <a class="video__link" href="images/Premiere.mp4" data-fancybox="gallery-video">
                           <img src="images/experts-img2.webp" alt="image for video">
                           <div class="video__link_play">
                             <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -908,7 +909,7 @@
                     </div>
                     <div class="swiper-slide">
                       <div class="video">
-                        <a class="video__link" href="#!">
+                        <a class="video__link" href="images/Premiere.mp4" data-fancybox>
                           <img src="images/experts-img1.webp" alt="image for video">
                           <div class="video__link_play">
                             <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -921,7 +922,7 @@
                     </div>
                     <div class="swiper-slide">
                       <div class="video">
-                        <a class="video__link" href="#!">
+                        <a class="video__link" href="images/Premiere.mp4" data-fancybox>
                           <img src="images/experts-img2.webp" alt="image for video">
                           <div class="video__link_play">
                             <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2110,8 +2111,10 @@
                 <p>Круглосуточная запись по телефону</p>
                 <a href="tel:+74950998882">+7 (495) 099-88-82</a>
               </div>
-              <div class="footer__row">
-                <address> <img src="images/icons/Location-footer.svg" alt="location"> Москва, г. Москва, ул. Угрешская, д.2, стр.7</address>
+              <div class="footer__row footer__row--mod">
+                <address> 
+                  <img src="images/icons/Location-footer.svg" alt="location"> Москва, г. Москва, ул. Угрешская, д.2, стр.7
+                </address>
                 <a href="mailto:clinic@clinicnacpp.ru">
                   <img src="images/icons/Message.svg" alt="mail icon">
                   clinic@clinicnacpp.ru
@@ -2204,7 +2207,7 @@
     </footer>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://unpkg.com/imask"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <script src="js/main.js"></script>  
 </body>
 </html>

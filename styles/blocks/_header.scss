@@ -5,6 +5,9 @@
     background-color: var(--color-white);
     padding-bottom: 10px;
     z-index: 999;
+    @include table {
+        padding-bottom: 0px;
+    }
     &__content {
         position: relative;
     }
@@ -15,6 +18,9 @@
         gap: 16px;
         padding: 10px 0px;
         margin-bottom: 15px;
+        @include table {
+            margin-bottom: 0px;
+        }
     }
     &__logo {
         z-index: 3; 

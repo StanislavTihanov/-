@@ -20,16 +20,23 @@
     display: grid;
     &__inner {
         position: relative;
+        margin-bottom: 24px;
     }
     &__photo {
         position: relative;
         background-color: var(--color-bg);
         border-radius: 200px 70px 250px 200px;
         overflow: hidden;
-        padding-top: 330px;
+        height: 100%;
+        padding-top: 280px;
         img {
-           margin-bottom: -10px;
            max-width: 230px;
+           left: 50%;
+           top: 50%;
+           transform: translate(-50%, -50%);
+           @include mobile {
+            max-width: 185px;
+           }
         }
         &_arrow {
            position: absolute;
@@ -51,12 +58,17 @@
               height: 64px;
               top: 50%;
               left: 50%;
-              background-color: #000000;
               transform: translate(-50%, -50%);
               background-color: inherit;
               border: 1px solid var(--color-primary);
               border-radius: 50%;
               opacity: 0;
+              @include mobile {
+                opacity: 1;
+             }
+           }
+           @include mobile {
+              opacity: 1;
            }
         }
         margin-bottom: 24px;
@@ -82,10 +94,13 @@
                 }
             }
         }
+        @include mobile {
+            padding-top: 200px;
+        }
     }
     &__link {
         position: absolute;
-        bottom: 25px;
+        bottom: 0;
         left: 0;
     }
     &__name {

@@ -5,6 +5,14 @@
   overflow: hidden;
 }
 .slider {
+  .swiper-wrapper {
+    display: flex;
+    align-items: stretch;
+  }
+  .swiper-slide {
+    height: auto;
+    transition: all 0.5s ease;
+  }
   .partners__slide {
     display: flex;
     align-items: center;
