@@ -39,6 +39,7 @@
     }
     &__block {
         position: relative;
+        height: 100%;
         @include mobile {
           padding: 24px;
           border-radius: 32px;
@@ -58,6 +59,7 @@
         border-top-right-radius: var(--border-radius-small);
         border-bottom-right-radius: var(--border-radius-small);
         border-bottom-left-radius: var(--border-radius-small);
+        height: 87%;
         @include mobile {
           padding: 0;
           flex-wrap: wrap;

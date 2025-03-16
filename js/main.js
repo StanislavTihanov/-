@@ -269,6 +269,7 @@ twoSlide.forEach((twoSlide, index) => {
     breakpoints: {
       320: {
         slidesPerView: 1.1,
+        spaceBetween: 16,
       },
       640: {
         slidesPerView: 1,

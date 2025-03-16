@@ -150,12 +150,11 @@ section {
     }
 }
 .right__button {
-    justify-self: end;
-    .button {
-        justify-content: center;
-    }
+    display: inline-grid;
+    justify-content: end;
+    width: 100%;
     @include mobile {
-        float: none;
+        display: flex;
     }
 }
 .video {

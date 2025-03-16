@@ -40,7 +40,6 @@
         margin-bottom: 16px;
         position: relative;
         display: inline-block;
-        cursor: pointer;
         &::after {
             position: absolute;
             content: '';
@@ -50,6 +49,10 @@
             right: -20px;
             background-color: var(--color-black-text);
             transform: rotate(45deg);
+            display: none;
+            @include mobile {
+                display: block;
+            }
         }
         &::before {
             position: absolute;
@@ -60,6 +63,10 @@
             right: -27px;
             background-color: var(--color-black-text);
             transform: rotate(-45deg);
+            display: none;
+            @include mobile {
+                display: block;
+            }
         }
         &.view {
             &::after {
@@ -94,6 +101,12 @@
        p {
           margin-bottom: 8px;
        }
+       a {
+        transition: all 0.3s;
+        @include hover {
+            color: var(--color-primary);
+        }
+       }
     }
     &__row {
         display: flex;
@@ -109,6 +122,10 @@
             font-family: var(--font-family-m);
             line-height: 130%;
             @include fluid-text(13, 15);
+            transition: all 0.3s;
+            @include hover {
+                color: var(--color-primary);
+            }
         }
         &:not(:last-child) {
             margin-bottom: 24px;

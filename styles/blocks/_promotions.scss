@@ -4,6 +4,42 @@
     @include table {
         margin-top: 50px;
     }
+    &__content {
+        .slider__wrap {
+            margin-bottom: 24px;
+            .slider__buttons {
+                top: 200px;
+                left: 93%;
+                @include table {
+                    top: 120px;
+                    left: 90%;
+                }
+                @include mobile {
+                    display: block;
+                    left: 24px;
+                    top: 200px;
+                }
+            }
+            .swiper-button-next {
+                background-color: rgba(255, 255, 255, 0.1);
+                border: 3px solid var(--color-white);
+                position: relative;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 64px;
+                    height: 64px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: inherit;
+                    border: 1px solid var(--color-white);
+                    border-radius: 50%;
+                    animation: pulse 3s ease-in-out infinite;
+                 }
+            }
+        }
+    }
     &__slide {
         display: flex;
         justify-content: space-between;
