@@ -1,0 +1,88 @@
+.doctor {
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    &__photo {
+        border-radius: 160px 180px 160px 40px;
+        background: linear-gradient(45deg, #c3f0f3 32.68%, #a9d9e6 100%);
+        padding: 30px 43px 0px 43px;
+        overflow: hidden;
+        border: 1px solid var(--color-white);
+        img {
+            max-width: 230px;
+        }
+    }
+    &__info {
+        margin-bottom: 32px;
+    }
+    &__blocks {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 32px;
+    }
+    &__block {
+        display: flex;
+        gap: 10px;
+        &_icon {
+            flex: none;
+        }
+        &_text {
+            h3 {
+                font-size: 13px;
+                line-height: 138%;
+            }
+            p {
+                @include fluid-text(16, 17);
+                font-weight: 600;
+                line-height: 141%;
+                font-family: var(--font-family-m);
+            }
+            a {
+                font-size: 13px;
+                line-height: 138%;
+                color: var(--color-primary);
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+        }
+
+        &_inner {
+            display: flex;
+            gap: 10px;
+        }
+        &:last-child {
+            span {
+                font-weight: 700;
+                font-size: 17px;
+                line-height: 141%;
+                font-family: var(--font-family-base);
+                color: var(--color-secondary);
+            }
+        }
+    }
+    &__list {
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 133%;
+            font-family: var(--font-family-m);
+            background-color: #EFFAFB;
+            padding: 10px 32px;
+            border-radius: 16px;
+            li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 7px;
+            }
+        }
+    }
+}

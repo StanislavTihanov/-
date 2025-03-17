@@ -1,34 +1,41 @@
 /*----------------------------------breadcrumbs--------------------------------*/
 .breadcrumbs {
     margin-bottom: 50px;
+    margin-top: 150px;
+    @include table {
+        margin-top: 80px;
+    }
     &__list {
         display: flex;
         align-items: center;
-        gap: 5px 15px;
+        gap: 5px 10px;
         flex-wrap: wrap;
     }
     &__item:not(:last-child){
         position: relative;
-        padding-right: 20px;
+        padding-right: 10px;
     }
     &__item:not(:last-child)::after {
         position: absolute;
-        content: '';
-        width: 5px;
-        height: 5px;
-        top: 5px;
+        content: '/';
+        width: 1px;
+        height: 15px;
+        top: 0;
         right: 0;
         border-radius: 1px;
-        background: rgb(155, 155, 155);
-        transform: rotate(45deg);
+        transform: rotate(15deg);
     }
     &__item {
-        font-size: 12px;
-        line-height: 15px;
-        font-size: 12px;
-        color: rgb(155, 155, 155);
+        font-weight: 600;
+        line-height: 133%;
+        font-family: var(--font-family-m);
+        color: var(--color-black-text);
         &_link:hover {
-            color: var(--color-blue);
+            transition: all 0.3s;
+            color: var(--color-primary);
+        }
+        &:last-child {
+            color: var(--color-primary);
         }
     }
 }

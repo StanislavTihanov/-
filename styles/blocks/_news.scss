@@ -68,9 +68,12 @@
             justify-content: end;
             align-items: center;
             gap: 10px;
-            span {
+            time {
                 color: var(--color-primary);
-
+                font-family: var(--font-family-m);
+                font-weight: 600;
+                @include fluid-text(12, 15);
+                line-height: 133%;
             }
             @include table {
                 justify-content: start;
@@ -107,7 +110,7 @@
                 img {
                     border-top-left-radius: 24px;
                     border-top-right-radius: 24px;
-                    border-bottom-left-radius: 0px
+                    border-bottom-left-radius: 0px;
                 }
             }
             .news__item_top {

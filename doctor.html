@@ -337,60 +337,135 @@
       </div>
     </header>
     <main class="main">
-      <section class="promotions">
-        <div class="promotions__content _container">
-          <h2 class="promotions__title"></h2>
-          <div class="promotions__blocks">
-            <a class="promotions__block promotions__block_1" href="#!">
-              <span>10%</span>
-              <p>на весь лабораторный комплекс</p>
-              <picture>
-                <source media="(max-width: 768px)" srcset="images/main-section-img1-mob.webp">
-                <img src="images/main-section-img1.webp" alt="image">
-              </picture>
-              <div class="arrow__pulse">
-                <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.75 7.72583L1.75 7.72583" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M10.7002 1.70149L16.7502 7.72549L10.7002 13.7505" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </div>
+
+      <div class="breadcrumbs _container">
+        <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="index.html" class="breadcrumbs__item_link">
+              <span itemprop="name">Главная</span>
             </a>
-            <a class="promotions__block promotions__block_2" href="#!">
-              <div class="promotions__block_inner">
-                <span>40%</span>
-                <p>на консультацию онколога</p>
-              </div>
-              <img src="images/main-section-img2.webp" alt="image">
-              <div class="arrow__pulse">
-                <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.75 7.72583L1.75 7.72583" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M10.7002 1.70149L16.7502 7.72549L10.7002 13.7505" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </div>
+            <meta itemprop="position" content="1"/>
+          </li>
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="doctors.html" class="breadcrumbs__item_link">
+              <span itemprop="name">Врачи</span>
             </a>
-            <a class="promotions__block promotions__block_3" href="#!">
-              <div class="promotions__block_inner">
-                <span>20%</span>
-                <p>на нахождение в стационаре</p>
-              </div>
-              <img src="images/main-section-img3.webp" alt="image">
-              <div class="arrow__pulse">
-                <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.75 7.72583L1.75 7.72583" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M10.7002 1.70149L16.7502 7.72549L10.7002 13.7505" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </div>
+            <meta itemprop="position" content="2"/>
+          </li>
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="specialization.html" class="breadcrumbs__item_link">
+              <span itemprop="name">Онколог</span>
             </a>
-          </div>
-          <div class="right__button">
-            <a class="button button-outline" href="#!">
-              все акции
-              <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.1665 5.81718L1.1665 5.81718" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M7.1333 1.80089L11.1666 5.81689L7.1333 9.83356" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </a>
-          </div>
+            <meta itemprop="position" content="3"/>
+          </li>
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <span itemprop="name">Сергеев Пётр Сергеевич</span>
+            <meta itemprop="position" content="4"/>
+          </li>
+        </ul>
+      </div>
+
+      <section class="doctor">
+        <div class="doctor__content _container">
+           <div class="doctor__body">
+            <div class="doctor__photo_wrapper">
+              <div class="doctor__photo">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="images/doctor-photo1.webp">
+                  <img src="images/doctor-photo1@2x.webp" alt="Сергеев Пётр Сергеевич">
+                </picture>
+              </div>
+            </div>
+            <div class="doctor__info">
+              <div class="title">
+                <h1>Сергеев Пётр Сергеевич</h1>
+              </div>
+              <div class="doctor__blocks">
+                <div class="doctor__block">
+                  <div class="doctor__block_icon">
+                    <img src="images/icons/doctor-icon1.svg" alt="icon">
+                  </div>
+                  <div class="doctor__block_text">
+                    <h3>Специальность:</h3>
+                    <p>Главный врач / <span>онколог-хирург</span></p>
+                  </div>
+                </div>
+                <div class="doctor__block">
+                  <div class="doctor__block_icon">
+                    <img src="images/icons/doctor-icon2.svg" alt="icon">
+                  </div>
+                  <div class="doctor__block_text">
+                    <h3>Выполнено операций:</h3>
+                    <p>более 2000 операций</p>
+                  </div>
+                </div>
+                <div class="doctor__block">
+                  <div class="doctor__block_icon">
+                    <img src="images/icons/doctor-icon3.svg" alt="icon">
+                  </div>
+                  <div class="doctor__block_text">
+                    <h3>Стаж:</h3>
+                    <p>12 лет</p>
+                  </div>
+                </div>
+                <div class="doctor__block">
+                  <div class="doctor__block_icon">
+                    <img src="images/icons/doctor-icon4.svg" alt="icon">
+                  </div>
+                  <div class="doctor__block_text">
+                    <h3>Ученая степень, категория:</h3>
+                    <p>Кандидат медицинских наук, высшая категория</p>
+                  </div>
+                </div>
+                <div class="doctor__block">
+                  <div class="doctor__block_icon">
+                    <img src="images/icons/doctor-icon5.svg" alt="icon">
+                  </div>
+                  <div class="doctor__block_text">
+                    <div class="doctor__block_inner">
+                      <h3>Отзывы:</h3>
+                      <p>12</p>
+                    </div>
+                    <a href="#!">оставить отзыв
+                      <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.1699 5.81712L1.16992 5.81712" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M7.13672 1.80086L11.1701 5.81686L7.13672 9.83353" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="doctor__block">
+                  <div class="doctor__block_icon">
+                    <img src="images/icons/doctor-icon6.svg" alt="icon">
+                  </div>
+                  <div class="doctor__block_text">
+                    <h3>Стоимость приема:</h3>
+                    <p><span>от 2000 ₽</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="doctor__list">
+                <ul>
+                  <li>
+                    <img src="images/icons/mark-primary.svg" alt="mark">
+                    <p>Принимает по ДМС</p>
+                  </li>
+                  <li>
+                    <img src="images/icons/mark-primary.svg" alt="mark">
+                    <p>Консультирует онлайн</p>
+                  </li>
+                  <li>
+                    <img src="images/icons/mark-primary.svg" alt="mark">
+                    <p>Высокий рейтинг</p>
+                  </li>
+                  <li>
+                    <img src="images/icons/mark-primary.svg" alt="mark">
+                    <p>Доступен для экстренных консультаций</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+           </div>
         </div>
       </section>
 
@@ -793,7 +868,7 @@
             <div class="mission__body">
               <div class="mission__info">
                 <div class="title title--mod">
-                  Ваше здоровье — наша миссия. Мы боремся за каждую жизнь.
+                  <h2>Ваше здоровье — наша миссия. Мы боремся за каждую жизнь.</h2>
                 </div>
                 <p>
                   Онкологический центр НАКФФ — это место, где наука, технологии и 
@@ -882,12 +957,12 @@
                 <source media="(max-width: 768px)" srcset="images/exprt-img.webp">
                 <img src="images/exprt-img@2x.webp" alt="Диагноз в течение 24 часов">
               </picture>
-              <div class="expert__play">
+              <a class="expert__play" href="images/Premiere.mp4" data-fancybox>
                 <img src="images/icons/play-icon.svg" alt="play icon">
                 <svg width="49" height="50" viewBox="0 0 49 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M46.2203 30.0541C49.5265 27.4958 49.5265 22.5043 46.2203 19.946C36.2284 12.2147 25.0711 6.12086 13.166 1.8926L10.9911 1.12015C6.83015 -0.357653 2.4351 2.45755 1.87181 6.75271C0.29794 18.7534 0.29794 31.2467 1.8718 43.2474C2.4351 47.5426 6.83014 50.3578 10.991 48.88L13.166 48.1075C25.0711 43.8793 36.2284 37.7854 46.2203 30.0541Z" fill="#00A7AA" />
                 </svg>
-              </div>
+              </a>
             </div>
             <div class="experts__container">
               <div class="slider__wrap">
@@ -987,21 +1062,21 @@
             <div class="slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="card">
-                    <div class="card__inner _ibg">
-                      <a class="card__photo" href="#!">
+                  <div class="doctor">
+                    <div class="doctor__inner _ibg">
+                      <a class="doctor__photo" href="#!">
                         <picture>
                           <source media="(max-width: 768px)" srcset="images/doctor-photo1.webp">
                           <img src="images/doctor-photo1@2x.webp" alt="Сергеев Пётр Сергеевич">
                         </picture>
-                        <div class="arrow__pulse">
+                        <div class="doctor__photo_arrow">
                           <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.75 7.72583L1.75 7.72583" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M10.7002 1.70149L16.7502 7.72549L10.7002 13.7505" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
                         </div>
                       </a>
-                      <div class="card__link">
+                      <div class="doctor__link">
                         <a class="button button-filled-primary" href="#!">
                           запись
                           <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1011,35 +1086,35 @@
                         </a>
                       </div>
                     </div>
-                    <a class="card__name" href="#!">Сергеев Пётр Сергеевич</a>
-                    <div class="card__post">
+                    <a class="doctor__name" href="#!">Сергеев Пётр Сергеевич</a>
+                    <div class="doctor__post">
                       <p>Главный врач, онколог-хирург</p>
                     </div>
-                    <div class="card__experience">
+                    <div class="doctor__experience">
                       <img src="images/icons/work.svg" alt="icon experience">
                       <p>Стаж: <span>18</span> лет</p>
                     </div>
-                    <div class="card__description">
+                    <div class="doctor__description">
                       <p>Кандидат медицинских наук, высшая категория</p>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="card">
-                    <div class="card__inner _ibg">
-                      <a class="card__photo" href="#!">
+                  <div class="doctor">
+                    <div class="doctor__inner _ibg">
+                      <a class="doctor__photo" href="#!">
                         <picture>
                           <source media="(max-width: 768px)" srcset="images/doctor-photo2.webp">
                           <img src="images/doctor-photo2@2x.webp" alt="Сергеев Пётр Сергеевич">
                         </picture>
-                        <div class="arrow__pulse">
+                        <div class="doctor__photo_arrow">
                           <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.75 7.72583L1.75 7.72583" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M10.7002 1.70149L16.7502 7.72549L10.7002 13.7505" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
                         </div>
                       </a>
-                      <div class="card__link">
+                      <div class="doctor__link">
                         <a class="button button-filled-primary" href="#!">
                           запись
                           <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1049,35 +1124,35 @@
                         </a>
                       </div>
                     </div>
-                    <a class="card__name" href="#!">Труханов Петр Александрович</a>
-                    <div class="card__post">
+                    <a class="doctor__name" href="#!">Труханов Петр Александрович</a>
+                    <div class="doctor__post">
                       <p>Заведующий стационаром, невролог</p>
                     </div>
-                    <div class="card__experience">
+                    <div class="doctor__experience">
                       <img src="images/icons/work.svg" alt="icon experience">
                       <p>Стаж: <span>8</span> лет</p>
                     </div>
-                    <div class="card__description">
+                    <div class="doctor__description">
                       <p>Вторая категория</p>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="card">
-                    <div class="card__inner _ibg">
-                      <a class="card__photo" href="#!">
+                  <div class="doctor">
+                    <div class="doctor__inner _ibg">
+                      <a class="doctor__photo" href="#!">
                         <picture>
                           <source media="(max-width: 768px)" srcset="images/doctor-photo3.webp">
                           <img src="images/doctor-photo3@2x.webp" alt="Сергеев Пётр Сергеевич">
                         </picture>
-                        <div class="arrow__pulse">
+                        <div class="doctor__photo_arrow">
                           <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.75 7.72583L1.75 7.72583" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M10.7002 1.70149L16.7502 7.72549L10.7002 13.7505" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
                         </div>
                       </a>
-                      <div class="card__link">
+                      <div class="doctor__link">
                         <a class="button button-filled-primary" href="#!">
                           запись
                           <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1087,35 +1162,35 @@
                         </a>
                       </div>
                     </div>
-                    <a class="card__name" href="#!">Джавадова Парвина Аязовна</a>
-                    <div class="card__post">
+                    <a class="doctor__name" href="#!">Джавадова Парвина Аязовна</a>
+                    <div class="doctor__post">
                       <p>Онкология, химиотерапия</p>
                     </div>
-                    <div class="card__experience">
+                    <div class="doctor__experience">
                       <img src="images/icons/work.svg" alt="icon experience">
                       <p>Стаж: <span>6</span> лет</p>
                     </div>
-                    <div class="card__description">
+                    <div class="doctor__description">
                       <p>Ведущий специалист</p>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="card">
-                    <div class="card__inner _ibg">
-                      <a class="card__photo" href="#!">
+                  <div class="doctor">
+                    <div class="doctor__inner _ibg">
+                      <a class="doctor__photo" href="#!">
                         <picture>
                           <source media="(max-width: 768px)" srcset="images/doctor-photo1.webp">
                           <img src="images/doctor-photo1@2x.webp" alt="Сергеев Пётр Сергеевич">
                         </picture>
-                        <div class="arrow__pulse">
+                        <div class="doctor__photo_arrow">
                           <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.75 7.72583L1.75 7.72583" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M10.7002 1.70149L16.7502 7.72549L10.7002 13.7505" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
                         </div>
                       </a>
-                      <div class="card__link">
+                      <div class="doctor__link">
                         <a class="button button-filled-primary" href="#!">
                           запись
                           <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1125,35 +1200,35 @@
                         </a>
                       </div>
                     </div>
-                    <a class="card__name" href="#!">Сергеев Пётр Сергеевич</a>
-                    <div class="card__post">
+                    <a class="doctor__name" href="#!">Сергеев Пётр Сергеевич</a>
+                    <div class="doctor__post">
                       <p>Главный врач, онколог-хирург</p>
                     </div>
-                    <div class="card__experience">
+                    <div class="doctor__experience">
                       <img src="images/icons/work.svg" alt="icon experience">
                       <p>Стаж: <span>18</span> лет</p>
                     </div>
-                    <div class="card__description">
+                    <div class="doctor__description">
                       <p>Кандидат медицинских наук, высшая категория</p>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="card">
-                    <div class="card__inner _ibg">
-                      <a class="card__photo" href="#!">
+                  <div class="doctor">
+                    <div class="doctor__inner _ibg">
+                      <a class="doctor__photo" href="#!">
                         <picture>
                           <source media="(max-width: 768px)" srcset="images/doctor-photo2.webp">
                           <img src="images/doctor-photo2@2x.webp" alt="Сергеев Пётр Сергеевич">
                         </picture>
-                        <div class="arrow__pulse">
+                        <div class="doctor__photo_arrow">
                           <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.75 7.72583L1.75 7.72583" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M10.7002 1.70149L16.7502 7.72549L10.7002 13.7505" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
                         </div>
                       </a>
-                      <div class="card__link">
+                      <div class="doctor__link">
                         <a class="button button-filled-primary" href="#!">
                           запись
                           <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1163,35 +1238,35 @@
                         </a>
                       </div>
                     </div>
-                    <a class="card__name" href="#!">Труханов Петр Александрович</a>
-                    <div class="card__post">
+                    <a class="doctor__name" href="#!">Труханов Петр Александрович</a>
+                    <div class="doctor__post">
                       <p>Заведующий стационаром, невролог</p>
                     </div>
-                    <div class="card__experience">
+                    <div class="doctor__experience">
                       <img src="images/icons/work.svg" alt="icon experience">
                       <p>Стаж: <span>8</span> лет</p>
                     </div>
-                    <div class="card__description">
+                    <div class="doctor__description">
                       <p>Вторая категория</p>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="card">
-                    <div class="card__inner _ibg">
-                      <a class="card__photo" href="#!">
+                  <div class="doctor">
+                    <div class="doctor__inner _ibg">
+                      <a class="doctor__photo" href="#!">
                         <picture>
                           <source media="(max-width: 768px)" srcset="images/doctor-photo3.webp">
                           <img src="images/doctor-photo3@2x.webp" alt="Сергеев Пётр Сергеевич">
                         </picture>
-                        <div class="arrow__pulse">
+                        <div class="doctor__photo_arrow">
                           <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.75 7.72583L1.75 7.72583" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M10.7002 1.70149L16.7502 7.72549L10.7002 13.7505" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
                         </div>
                       </a>
-                      <div class="card__link">
+                      <div class="doctor__link">
                         <a class="button button-filled-primary" href="#!">
                           запись
                           <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1201,15 +1276,15 @@
                         </a>
                       </div>
                     </div>
-                    <a class="card__name" href="#!">Джавадова Парвина Аязовна</a>
-                    <div class="card__post">
+                    <a class="doctor__name" href="#!">Джавадова Парвина Аязовна</a>
+                    <div class="doctor__post">
                       <p>Онкология, химиотерапия</p>
                     </div>
-                    <div class="card__experience">
+                    <div class="doctor__experience">
                       <img src="images/icons/work.svg" alt="icon experience">
                       <p>Стаж: <span>6</span> лет</p>
                     </div>
-                    <div class="card__description">
+                    <div class="doctor__description">
                       <p>Ведущий специалист</p>
                     </div>
                   </div>
@@ -1551,7 +1626,7 @@
           <div class="callback__body">
             <div class="callback__info">
               <div class="title title--mod">
-                Остались вопросы?
+                <h2>Остались вопросы?</h2>
               </div>
               <p>Закажите обратный звонок, наши специалисты свяжутся с вами в ближайшее время !</p>
               <a class="button button-white" href="#!">
@@ -1583,74 +1658,110 @@
           <div class="title">
             <h2>Награды и премии </h2>
           </div>
-          <div class="awards__body">
-            <div class="awards__info">
-              <div class="awards__info_text">
-                <h3>Команда клиники НАКФФ старается для вас</h3>
-                <p>
-                  Спешим поделиться важным и приятным событием — Медицинская клиника НАКФФ стала лауреатом 
-                  Всероссийской Премии ПроДокторов-2024 в номинации «Лучшая частная клиника».Выражаем огромную 
-                  благодарность пациентам 
-                </p>
+          <div class="slider__wrap">
+            <div class="slider__buttons">
+              <div class="swiper-button-prev swiper-button-pr-2">
+                <img src="images/icons/Arrow-Right.svg" alt="arrow">
               </div>
-              <div class="awards__info_wrapper">
-                <div class="awards__info_photo">
-                  <picture>
-                    <source media="(max-width: 768px)" srcset="images/awards-photo.webp">
-                    <img src="images/awards-photo@2x.webp" alt="photo">
-                  </picture>
-                </div>
+              <div class="swiper-button-next swiper-button-nx-2">
+                <img src="images/icons/Arrow-Right.svg" alt="arrow">
               </div>
             </div>
-            <div class="slider__wrap">
-              <div class="slider__buttons">
-                <div class="swiper-button-prev swiper-button-pr-1">
-                  <img src="images/icons/Arrow-Right.svg" alt="arrow">
+            <div class="one-slide">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="awards__slide">
+                    <div class="awards__info">
+                      <div class="awards__info_text">
+                        <h3>Команда клиники НАКФФ старается для вас</h3>
+                        <p>
+                          Спешим поделиться важным и приятным событием — Медицинская клиника НАКФФ стала лауреатом 
+                          Всероссийской Премии ПроДокторов-2024 в номинации «Лучшая частная клиника».Выражаем огромную 
+                          благодарность пациентам 
+                        </p>
+                      </div>
+                      <div class="awards__info_photo">
+                        <picture>
+                          <source media="(max-width: 768px)" srcset="images/awards-photo.webp">
+                          <img src="images/awards-photo@2x.webp" alt="photo">
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="awards__images">
+                      <img src="images/awards-img1.jpg" alt="image">
+                      <img src="images/awards-img2.jpg" alt="image">
+                    </div>
+                  </div>
                 </div>
-                <div class="swiper-button-next swiper-button-nx-1">
-                  <img src="images/icons/Arrow-Right.svg" alt="arrow">
+                <div class="swiper-slide">
+                  <div class="awards__slide">
+                    <div class="awards__info">
+                      <div class="awards__info_text">
+                        <h3>Команда клиники НАКФФ старается для вас</h3>
+                        <p>
+                          Спешим поделиться важным и приятным событием — Медицинская клиника НАКФФ стала лауреатом 
+                          Всероссийской Премии ПроДокторов-2024 в номинации «Лучшая частная клиника».Выражаем огромную 
+                          благодарность пациентам 
+                        </p>
+                      </div>
+                      <div class="awards__info_photo">
+                        <picture>
+                          <source media="(max-width: 768px)" srcset="images/awards-photo.webp">
+                          <img src="images/awards-photo@2x.webp" alt="photo">
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="awards__images">
+                      <img src="images/awards-img1.jpg" alt="image">
+                      <img src="images/awards-img2.jpg" alt="image">
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="one-slide">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
+                <div class="swiper-slide">
+                  <div class="awards__slide">
+                    <div class="awards__info">
+                      <div class="awards__info_text">
+                        <h3>Команда клиники НАКФФ старается для вас</h3>
+                        <p>
+                          Спешим поделиться важным и приятным событием — Медицинская клиника НАКФФ стала лауреатом 
+                          Всероссийской Премии ПроДокторов-2024 в номинации «Лучшая частная клиника».Выражаем огромную 
+                          благодарность пациентам 
+                        </p>
+                      </div>
+                      <div class="awards__info_photo">
+                        <picture>
+                          <source media="(max-width: 768px)" srcset="images/awards-photo.webp">
+                          <img src="images/awards-photo@2x.webp" alt="photo">
+                        </picture>
+                      </div>
+                    </div>
                     <div class="awards__images">
-                      <a class="awards__link" href="images/awards-img1.webp" data-fancybox="gallery-awards">
-                        <img src="images/awards-img1.webp" alt="image">
-                      </a>
-                      <a class="awards__link" href="images/awards-img2.webp" data-fancybox="gallery-awards">
-                        <img src="images/awards-img2.webp" alt="image">
-                      </a>
+                      <img src="images/awards-img1.jpg" alt="image">
+                      <img src="images/awards-img2.jpg" alt="image">
                     </div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="awards__images">
-                      <a class="awards__link" href="images/awards-img1.webp" data-fancybox="gallery-awards">
-                        <img src="images/awards-img1.webp" alt="image">
-                      </a>
-                      <a class="awards__link" href="images/awards-img2.webp" data-fancybox="gallery-awards">
-                        <img src="images/awards-img2.webp" alt="image">
-                      </a>
+                </div>
+                <div class="swiper-slide">
+                  <div class="awards__slide">
+                    <div class="awards__info">
+                      <div class="awards__info_text">
+                        <h3>Команда клиники НАКФФ старается для вас</h3>
+                        <p>
+                          Спешим поделиться важным и приятным событием — Медицинская клиника НАКФФ стала лауреатом 
+                          Всероссийской Премии ПроДокторов-2024 в номинации «Лучшая частная клиника».Выражаем огромную 
+                          благодарность пациентам 
+                        </p>
+                      </div>
+                      <div class="awards__info_photo">
+                        <picture>
+                          <source media="(max-width: 768px)" srcset="images/awards-photo.webp">
+                          <img src="images/awards-photo@2x.webp" alt="photo">
+                        </picture>
+                      </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
                     <div class="awards__images">
-                      <a class="awards__link" href="images/awards-img1.webp" data-fancybox="gallery-awards">
-                        <img src="images/awards-img1.webp" alt="image">
-                      </a>
-                      <a class="awards__link" href="images/awards-img2.webp" data-fancybox="gallery-awards">
-                        <img src="images/awards-img2.webp" alt="image">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="awards__images">
-                      <a class="awards__link" href="images/awards-img1.webp" data-fancybox="gallery-awards">
-                        <img src="images/awards-img1.webp" alt="image">
-                      </a>
-                      <a class="awards__link" href="images/awards-img2.webp" data-fancybox="gallery-awards">
-                        <img src="images/awards-img2.webp" alt="image">
-                      </a>
+                      <img src="images/awards-img1.jpg" alt="image">
+                      <img src="images/awards-img2.jpg" alt="image">
                     </div>
                   </div>
                 </div>
@@ -1686,7 +1797,7 @@
                         </svg>
                       </div>
                     </a>
-                    <p>лечащий врач: <a href="#!">Чудаев Дмитрий Борисович</a></p>
+                    <p>лечащий врач: <span>Чудаев Дмитрий Борисович</span></p>
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -1699,7 +1810,7 @@
                         </svg>
                       </div>
                     </a>
-                    <p>лечащий врач: <a href="#!">Чудаев Дмитрий Борисович</a></p>
+                    <p>лечащий врач: <span>Чудаев Дмитрий Борисович</span></p>
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -1712,7 +1823,7 @@
                         </svg>
                       </div>
                     </a>
-                    <p>лечащий врач: <a href="#!">Чудаев Дмитрий Борисович</a></p>
+                    <p>лечащий врач: <span>Чудаев Дмитрий Борисович</span></p>
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -1725,7 +1836,7 @@
                         </svg>
                       </div>
                     </a>
-                    <p>лечащий врач: <a href="#!">Чудаев Дмитрий Борисович</a></p>
+                    <p>лечащий врач: <span>Чудаев Дмитрий Борисович</span></p>
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -1738,7 +1849,7 @@
                         </svg>
                       </div>
                     </a>
-                    <p>лечащий врач: <a href="#!">Чудаев Дмитрий Борисович</a></p>
+                    <p>лечащий врач: <span>Чудаев Дмитрий Борисович</span></p>
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -1751,7 +1862,7 @@
                         </svg>
                       </div>
                     </a>
-                    <p>лечащий врач: <a href="#!">Чудаев Дмитрий Борисович</a></p>
+                    <p>лечащий врач: <span>Чудаев Дмитрий Борисович</span></p>
                   </div>
                 </div>
               </div>
@@ -1826,114 +1937,6 @@
         </div>
       </section>
 
-      <section class="news section-color">
-        <div class="news__content _container">
-          <div class="title">
-            <h2>Новости</h2>
-          </div>
-          <div class="news__body">
-            <a class="news__item" href="#!">
-              <div class="news__item_photo">
-                <picture>
-                  <source media="(max-width: 768px)" srcset="images/news-img1-mob.jpg">
-                  <img src="images/news-img1.jpg" alt="img">
-                </picture>
-                <div class="news__btn">
-                  <div class="button button-outline">
-                    далее
-                    <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M11.1665 5.81803L1.1665 5.81803" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                      <path d="M7.1333 1.80132L11.1666 5.81732L7.1333 9.83398" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="news__item_info">
-                <div class="news__item_top">
-                  <h3>Рейтинг 5 звезд на продокторов</h3>
-                  <p>
-                    Рады поделиться замечательной новостью — наша 
-                    клиника получила максимальный рейтинг в 5 звёзд на ПроДокторов!
-                  </p>
-                </div>
-                <div class="news__item_bottom">
-                  <time datetime="2023-03-02">02.03.2025</time>
-                </div>
-              </div>
-            </a>
-            <a class="news__item" href="#!">
-              <div class="news__item_photo">
-                <picture>
-                  <source media="(max-width: 768px)" srcset="images/news-img2-mob.jpg">
-                  <img src="images/news-img2.jpg" alt="img">
-                </picture>
-                <div class="news__btn">
-                  <div class="button button-outline">
-                    далее
-                    <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M11.1665 5.81803L1.1665 5.81803" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                      <path d="M7.1333 1.80132L11.1666 5.81732L7.1333 9.83398" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="news__item_info">
-                <div class="news__item_top">
-                  <h3>
-                    Клиника «НАКФФ» лауреат Всероссийской Премии ПроДокторов-2024 в номинации 
-                    «Лучшая частная клиника»
-                  </h3>
-                  <p>
-                    Спешим поделиться важным и приятным событием — Медицинская клиника НАКФФ 
-                    стала лауреатом Всероссийской Премии ПроДокторов-2024 в номинации 
-                    «Лучшая частная клиника».Выражаем огромную благодарность пациентам 
-                  </p>
-                </div>
-                <div class="news__item_bottom">
-                  <time datetime="2023-03-02">02.03.2025</time>
-                </div>
-              </div>
-            </a>
-            <a class="news__item" href="#!">
-              <div class="news__item_photo">
-                <img src="images/news-img3.jpg" alt="img">
-                <div class="news__btn">
-                  <div class="button button-outline">
-                    далее
-                    <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M11.1665 5.81803L1.1665 5.81803" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                      <path d="M7.1333 1.80132L11.1666 5.81732L7.1333 9.83398" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="news__item_info">
-                <div class="news__item_top">
-                  <h3>
-                    Медицинская клиника НАКФФ приняла участие в IX Всероссийском конгрессе онкопациентов «Будем жить»
-                  </h3>
-                  <p>
-                    23 октября в Общественной палате Российской Федерации прошел IX Всероссийский конгресс онкопациентов под девизом «Будем жить»!
-                  </p>
-                </div>
-                <div class="news__item_bottom">
-                  <time datetime="2023-03-02">02.03.2025</time>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="news__button">
-            <a class="button button-outline" href="#!">
-              все новости
-              <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.1665 5.81803L1.1665 5.81803" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M7.1333 1.80132L11.1666 5.81732L7.1333 9.83398" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
-
       <section class="callback">
         <div class="callback__content _container callback__content--mod">
           <div class="callback__body">
@@ -1959,86 +1962,6 @@
               <source media="(max-width: 768px)" srcset="images/section-bg-mob.webp">
               <img src="images/license-bg.webp" alt="bg">
             </picture>
-          </div>
-        </div>
-      </section>
-
-      <section class="contacts">
-        <div class="contacts__content _container">
-          <div class="title">
-            <h2>Контакты клиники</h2>
-          </div>
-           <div class="contacts__map">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abbd0f087b65b9bf94151c20a84d4748625eb9a44c930280204792d85c544a9a8&amp;width=100%25&amp;height=428&amp;lang=ru_RU&amp;scroll=false"></script>
-           </div>
-           <div class="contacts__block">
-            <a href="tel:+74950998882">+7 (495) 099-88-82</a>
-            <address>
-              <img src="images/icons/Location.svg" alt="location icon">
-              Москва, ул. Угрешская, д. 2, строение 7
-            </address>
-            <h3>Режим работы:</h3>
-            <p>Стационар, госпитализация, скорая медицинская помощь круглосуточно, без выходных</p>
-           </div>
-        </div>
-      </section>
-
-      <section class="partners">
-        <div class="partners__content _container">
-          <div class="partners__body">
-            <div class="title">
-              <h2>Партнеры клиники</h2>
-            </div>
-            <div class="slider__wrap">
-              <div class="slider__buttons">
-                <div class="swiper-button-prev swiper-button-prev-4">
-                  <img src="images/icons/Arrow-Right.svg" alt="arrow">
-                </div>
-                <div class="swiper-button-next swiper-button-next-4">
-                  <img src="images/icons/Arrow-Right.svg" alt="arrow">
-                </div>
-              </div>
-              <div class="slider">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="partners__slide">
-                      <img src="images/icons/partners1.svg" alt="partners logo">
-                      <img src="images/icons/partners2.svg" alt="partners logo">
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="partners__slide">
-                      <img src="images/icons/partners3.svg" alt="partners logo">
-                      <img src="images/icons/partners4.svg" alt="partners logo">
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="partners__slide">
-                      <img src="images/icons/partners5.svg" alt="partners logo">
-                      <img src="images/icons/partners6.svg" alt="partners logo">
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="partners__slide">
-                      <img src="images/icons/partners1.svg" alt="partners logo">
-                      <img src="images/icons/partners2.svg" alt="partners logo">
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="partners__slide">
-                      <img src="images/icons/partners3.svg" alt="partners logo">
-                      <img src="images/icons/partners4.svg" alt="partners logo">
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="partners__slide">
-                      <img src="images/icons/partners5.svg" alt="partners logo">
-                      <img src="images/icons/partners6.svg" alt="partners logo">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

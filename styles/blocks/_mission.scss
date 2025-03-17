@@ -235,9 +235,12 @@
     &__icon1 {
         top: 17%;
         right: 4%;
+        @include table {
+            top: 5%;
+        }
         @include mobile {
             width: 80px;
-            top: 92%;
+            top: 90%;
             z-index: 3;
         }
     }

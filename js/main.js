@@ -95,6 +95,8 @@ searchButtons.forEach((searchBtn, index) => {
 });
 //------------------------------------------------------------------------search
 
+
+//------------------------------------------------------------------------выпадающие списки в хедере
 const menuButtons = document.querySelectorAll('.menu__button');
 const menuLists = document.querySelectorAll('.menu__list_wrapper');
 
@@ -130,8 +132,7 @@ document.addEventListener('click', (event) => {
     closeAllMenus();
   }
 });
-
-
+//------------------------------------------------------------------------выпадающие списки в хедере
 
 
 //------------------------------------------------------------------------Меню-Бургер
@@ -358,7 +359,12 @@ const filterGallery = new FilterGallery();
 //-----------------------------------------------------------------------сортировка по атрибутам
 
 //-----------------------------------------------------------------------кон для анимации иконак в блоке ваше здоровье
-document.addEventListener('mousemove', (e) => {
+document.addEventListener('scroll', () => {
+  // Вызываем функцию обновления позиции иконок с фиктивным событием мыши
+  updateIconsPosition({ clientX: 0, clientY: 0 });
+});
+
+function updateIconsPosition(e) {
   const icons = document.querySelectorAll('.mission__icon');
   const mouseX = e.clientX;
   const mouseY = e.clientY;
@@ -372,7 +378,7 @@ document.addEventListener('mousemove', (e) => {
     const deltaY = mouseY - iconY;
 
     // Настройте силу смещения (можно регулировать)
-    const strength = 0.03;
+    const strength = 0.05;
 
     // Применяем смещение в зависимости от положения курсора
     const translateX = deltaX * strength;
@@ -385,7 +391,7 @@ document.addEventListener('mousemove', (e) => {
       icon.style.transform = `translate(${-translateX}px, ${-translateY}px)`;
     }
   });
-});
+}
 //-----------------------------------------------------------------------кон для анимации иконак в блоке ваше здоровье
 
 

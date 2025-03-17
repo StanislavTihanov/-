@@ -1,6 +1,7 @@
 /*----------------------------------promotions-------------------------------*/
 .promotions {
     margin-top: 100px;
+    padding-bottom: 0px;
     @include table {
         margin-top: 50px;
     }
@@ -36,16 +37,18 @@
                     border: 1px solid var(--color-white);
                     border-radius: 50%;
                     animation: pulse 3s ease-in-out infinite;
-                 }
+                }
             }
         }
     }
-    &__slide {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    &__blocks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 24px;
-        flex-wrap: wrap;
+        margin-bottom: 24px;
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
     }
     &__block {
         display: flex;
@@ -56,6 +59,17 @@
         color: var(--color-white);
         position: relative;
         border-radius: var(--border-radius-small);
+        .arrow__pulse {
+            border: 3px solid var(--color-white);
+            top: 20px;
+            right: 25px;
+            &::after {
+                border: 1px solid var(--color-white);
+                @include mobile {
+                  opacity: 1;
+               }
+             }
+        }
         span {
             @include fluid-text(72, 148);
             line-height: 59%;
@@ -71,6 +85,8 @@
             line-height: 120%;
         }
         &_inner {
+            position: relative;
+            z-index: 3;
             span {
                 margin-bottom: 20px;
                 @include fluid-text(72, 88);
@@ -85,7 +101,7 @@
             background-color: #6196E5;
             border-radius: var(--border-radius);
             color: var(--color-white);
-            flex-basis: 100%;
+            grid-column: 1 / 3;
             img {
                 margin: -74px 0px -74px -50px;
                 @include mobile {
@@ -95,8 +111,12 @@
                     right: 0;
                 }
             }
-            @include table {
+            @include desktop {
+                padding: 74px 20px;
                 border-radius: var(--border-radius-small);
+            }
+            @include mobile {
+                grid-column: 1 / 2;
             }
         }
         &_2 {
@@ -104,24 +124,37 @@
             background-color: #82D7DC;
             border-top-right-radius: 170px;
             border-bottom-right-radius: 20px;
-            flex-basis: 49%;
             img {
                 border: 1px solid var(--color-white);
                 border-radius: 200px 200px 20px 200px;
                 position: absolute;
                 right: 0;
+                @include table {
+                    opacity: 0.5;
+                }
             }
-            @include table {
-                flex-basis: 100%;
+            .arrow__pulse {
+                right: 90%;
+            }
+            @include desktop {
+                padding: 82px 20px;
+                .arrow__pulse {
+                    right: 87%;
+                }
+            }
+            @include mobile {
                 border-top-right-radius: var(--border-radius-small);
+                .arrow__pulse {
+                    right: 25px;
+                }
                 img {
                     border-radius: 200px 200px 50px 200px;
                     width: 198px;
+                    opacity: 1;
                 }
             }
         }
         &_3 {
-            flex-basis: 49%;
             background-color: #8FD2F1;
             padding: 82px 60px;
             border-bottom-right-radius: 170px;
@@ -131,21 +164,45 @@
                 border-radius: 200px 20px 200px 200px;
                 position: absolute;
                 right: 0;
-            }
-            @include table {
-                flex-basis: 100%;
-                border-bottom-right-radius: var(--border-radius-small);
-                img {
-                    width: 198px;
+                @include table {
+                    opacity: 0.5;
                 }
             }
-        }
-        @include table {
-            padding: 50px 24px;
+            .arrow__pulse {
+                right: 90%;
+            }
+            @include desktop {
+                padding: 82px 20px;
+                .arrow__pulse {
+                    right: 87%;
+                }
+            }
+            @include mobile {
+                border-bottom-right-radius: var(--border-radius-small);
+                .arrow__pulse {
+                    right: 25px;
+                }
+                img {
+                    width: 198px;
+                    opacity: 1;
+                }
+            }
         }
         @include mobile {
             display: block;
             min-height: 343px;
+            padding: 50px 24px;
+            .arrow__pulse {
+                top: 30px;
+            }
+        }
+        @include hover {
+            .arrow__pulse {
+                opacity: 1;
+            }
+            .arrow__pulse::after {
+                animation: pulse 2s ease-in-out infinite;
+            }
         }
     }
 }
