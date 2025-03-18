@@ -4,30 +4,56 @@
     flex-direction: column;
   }
   .tab-labels {
-    background-color: #1E1F25;
-    padding: 25px 30px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 15px 80px;
-    border-radius: 6px;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
+    gap: 16px;
+    @include mobile {
+      flex-wrap: wrap;
+    }
+    &__inner {
+      display: flex;
+      align-items: center;
+      gap: 15px 30px;
+    }
+    &__yandex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5px;
+      background-color: var(--color-white);
+      border-radius: var(--border-radius-small);
+      padding: 8px 24px 8px 8px;
+      &_info {
+        p {
+          margin-bottom: 10px;
+        }
+        @include mobile {
+          p {
+            margin-bottom: 0px;
+            margin-right: 5px;
+          }
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+      @include mobile {
+        &>img {
+          width: 24px;
+        }
+      }
+    }
   }
   .tab-label {
-    padding: 15px 20px;
     cursor: pointer;
-    border: 1px solid transparent;
-    transition: background-color 0.3s, border-color 0.3s;
-    width: 100%;
-    text-align: center;
-    border-radius: 4px;
-  }
-  .tab-label:hover {
-    background-color: #e2e2e270;
+    color: #D6D6D6;
+    font-weight: 700;
+    @include fluid-text(24, 40);
+    line-height: 120%;
   }
   .tab-content {
     display: none;
-    padding: 20px;
   }
   .tab-content .easy__info {
     flex-basis: 1280px;
@@ -36,14 +62,12 @@
     flex-basis: 600px;
   }
   #tab-1:checked ~ .content-1,
-  #tab-2:checked ~ .content-2,
-  #tab-3:checked ~ .content-3 {
+  #tab-2:checked ~ .content-2 {
     display: block;
   }
   #tab-1:checked ~ .tab-labels label[for="tab-1"],
-  #tab-2:checked ~ .tab-labels label[for="tab-2"],
-  #tab-3:checked ~ .tab-labels label[for="tab-3"] {
-    background-color: #272A34;
+  #tab-2:checked ~ .tab-labels label[for="tab-2"] {
+    color: var(--color-black-text);
   }
   input[type="radio"] {
     display: none;

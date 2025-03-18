@@ -45,13 +45,16 @@
         padding: 8px 24px;
         background-color: var( --color-primary-hover);
         white-space: nowrap;
-        transition: All 0.3s ease 0s;
+        transition: All 0.3s;
+        svg path {
+            transition: All 0.3s;
+        }
         @include hover {
             background-color: var( --color-primary);
-            transition: All 0.3s ease 0s;
+            transition: All 0.3s;
             color: var(--color-white);
             svg path {
-                transition: All 0.3s ease 0s;
+                transition: All 0.3s;
                 fill: var(--color-white);
             }
         }

@@ -395,82 +395,98 @@ function updateIconsPosition(e) {
 //-----------------------------------------------------------------------кон для анимации иконак в блоке ваше здоровье
 
 
-//------------------------------------------------------------------------select выпадающий список
-//document.querySelectorAll('.dropdown').forEach(function(dropDownWrapper) {
-//  const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
-//  const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
-//  const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
-//  const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
-//
-//  // Функция для закрытия текущего дропдауна
-//  function closeCurrentDropdown() {
-//    dropDownList.classList.remove('dropdown__list--active');
-//    dropDownBtn.classList.remove('dropdown__button--active');
-//  }
-//
-//  // Открыть/закрыть текущий дропдаун
-//  dropDownBtn.addEventListener('click', function (e) {
-//    e.stopPropagation(); // Остановить всплытие события
-//    e.preventDefault(); // Предотвращаем отправку формы
-//    const isActive = dropDownList.classList.contains('dropdown__list--active');
-//
-//    // Закрываем все дропдауны перед открытием текущего
-//    document.querySelectorAll('.dropdown__list--active').forEach(function(activeList) {
-//      activeList.classList.remove('dropdown__list--active');
-//    });
-//    document.querySelectorAll('.dropdown__button--active').forEach(function(activeButton) {
-//      activeButton.classList.remove('dropdown__button--active');
-//    });
-//
-//    // Если текущий дропдаун не был активным, открываем его
-//    if (!isActive) {
-//      dropDownList.classList.add('dropdown__list--active');
-//      dropDownBtn.classList.add('dropdown__button--active');
-//    }
-//  });
-//
-//  // Выбор элемента списка
-//  dropDownListItems.forEach(function (listItem) {
-//    listItem.addEventListener('click', function (e) {
-//      e.stopPropagation(); // Остановить всплытие события
-//      e.preventDefault(); // Предотвращаем отправку формы
-//      dropDownBtn.innerText = this.innerText;
-//      dropDownBtn.focus();
-//      dropDownInput.value = this.dataset.value;
-//      closeCurrentDropdown(); // Закрываем текущий дропдаун после выбора
-//    });
-//  });
-//
-//  // Закрытие при клике снаружи
-//  document.addEventListener('click', function (e) {
-//    if (!dropDownWrapper.contains(e.target)) {
-//      closeCurrentDropdown(); // Закрываем только текущий дропдаун
-//    }
-//  });
-//
-//  // Закрытие при нажатии Tab или Escape
-//  document.addEventListener('keydown', function (e) {
-//    if (e.key === 'Tab' || e.key === 'Escape') {
-//      closeCurrentDropdown(); // Закрываем только текущий дропдаун
-//    }
-//  });
-//});
-//
-//// Инициализация кнопки после загрузки
-//function initMyButton() {
-//  const myButton = document.getElementById('myButton');
-//  
-//  if (myButton && myButton.style.display !== 'none') {
-//    myButton.addEventListener('click', function(event) {
-//      event.preventDefault();
-//    });
-//  }
-//}
-//window.onload = initMyButton;
+
 
 //------------------------------------------------------------------------select выпадающий список
+document.querySelectorAll('.dropdown').forEach(function(dropDownWrapper) {
+  const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
+  const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
+  const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list_item');
+  const dropDownInput = dropDownWrapper.querySelector('.dropdown__input_hidden');
 
+  // Функция для закрытия текущего дропдауна
+  function closeCurrentDropdown() {
+    dropDownList.classList.remove('dropdown__list--active');
+    dropDownBtn.classList.remove('dropdown__button--active');
+  }
 
+  // Открыть/закрыть текущий дропдаун
+  dropDownBtn.addEventListener('click', function (e) {
+    e.stopPropagation(); // Остановить всплытие события
+    e.preventDefault(); // Предотвращаем отправку формы
+    const isActive = dropDownList.classList.contains('dropdown__list--active');
+
+    // Закрываем все дропдауны перед открытием текущего
+    document.querySelectorAll('.dropdown__list--active').forEach(function(activeList) {
+      activeList.classList.remove('dropdown__list--active');
+    });
+    document.querySelectorAll('.dropdown__button--active').forEach(function(activeButton) {
+      activeButton.classList.remove('dropdown__button--active');
+    });
+
+    // Если текущий дропдаун не был активным, открываем его
+    if (!isActive) {
+      dropDownList.classList.add('dropdown__list--active');
+      dropDownBtn.classList.add('dropdown__button--active');
+    }
+  });
+
+  // Выбор элемента списка
+  dropDownListItems.forEach(function (listItem) {
+    listItem.addEventListener('click', function (e) {
+      e.stopPropagation(); // Остановить всплытие события
+      e.preventDefault(); // Предотвращаем отправку формы
+      dropDownBtn.innerText = this.innerText;
+      dropDownBtn.focus();
+      dropDownInput.value = this.dataset.value;
+      closeCurrentDropdown(); // Закрываем текущий дропдаун после выбора
+    });
+  });
+
+  // Закрытие при клике снаружи
+  document.addEventListener('click', function (e) {
+    if (!dropDownWrapper.contains(e.target)) {
+      closeCurrentDropdown(); // Закрываем только текущий дропдаун
+    }
+  });
+
+  // Закрытие при нажатии Tab или Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Tab' || e.key === 'Escape') {
+      closeCurrentDropdown(); // Закрываем только текущий дропдаун
+    }
+  });
+});
+
+// Инициализация кнопки после загрузки
+function initMyButton() {
+  const myButton = document.getElementById('myButton');
+  
+  if (myButton && myButton.style.display !== 'none') {
+    myButton.addEventListener('click', function(event) {
+      event.preventDefault();
+    });
+  }
+}
+window.onload = initMyButton;
+
+//------------------------------------------------------------------------select выпадающий список
+
+//------------------------------------------------------------------------появление контента при клике на кнопку more
+const buttonMore = document.querySelectorAll('.button-more');
+buttonMore.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Переключаем класс 'view' у самой кнопки
+        btn.classList.toggle('view');
+        // Находим все элементы с классом .content-more
+        const contentMoreElements = document.querySelectorAll('.content-more');
+        // Переключаем класс 'view' у всех элементов .content-more
+        contentMoreElements.forEach(content => {
+            content.classList.toggle('view');
+        });
+    });
+});
+//------------------------------------------------------------------------появление контента при клике на кнопку more
 //------------------------------------------------------------------------popup
 //const popupLinks = document.querySelectorAll('.popup-link');
 //const body = document.querySelector('body');

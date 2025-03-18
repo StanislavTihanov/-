@@ -1,9 +1,10 @@
 /*----------------------------------breadcrumbs--------------------------------*/
 .breadcrumbs {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     margin-top: 150px;
     @include table {
-        margin-top: 80px;
+        margin-top: 90px;
+        margin-bottom: 20px;
     }
     &__list {
         display: flex;
@@ -30,9 +31,12 @@
         line-height: 133%;
         font-family: var(--font-family-m);
         color: var(--color-black-text);
-        &_link:hover {
+        &_link {
             transition: all 0.3s;
-            color: var(--color-primary);
+            @include hover {
+                transition: all 0.3s;
+                color: var(--color-primary);
+            }
         }
         &:last-child {
             color: var(--color-primary);

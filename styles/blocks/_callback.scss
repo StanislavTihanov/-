@@ -1,11 +1,13 @@
 /*----------------------------------callback--------------------------------*/
 .callback {
-    padding: 64px 16px;
+    padding: 64px 0px;
     @include mobile {
-        padding: 30px 16px;
+        padding: 30px 0px;
+    }
+    &__wrapper {
+        position: relative;
     }
     &__content {
-        position: relative;
         &--mod {
             .callback__info {
                 p {
@@ -42,9 +44,9 @@
         justify-content: center;
         align-items: center;
         gap: 20px 200px;
+        padding: 0px 20px;
         @include table {
             gap: 20px;
-            padding: 20px 20px 0px 20px;
         }
         @include mobile {
             flex-wrap: wrap;
