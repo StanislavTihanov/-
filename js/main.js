@@ -184,39 +184,6 @@ document.addEventListener("DOMContentLoaded", function () {
 //------------------------------------------------------------------------Fancybox
 
 
-
-//------------------------------------------------------------------------Прокрутка при клике
-//let buttons = document.querySelectorAll('.menu__link');
-//
-//buttons.forEach((elem)=>{
-//  elem.addEventListener('click',()=>{
-//    menuBody.classList.remove('_active');
-//    burgerMenu.classList.remove('_active');
-//  })
-//})
-//
-//const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
-//
-//if (menuLinks.length > 0) {
-//  menuLinks.forEach(menuLink => {
-//    menuLink.addEventListener("click", onMenuLinkClick);
-//  });
-//  function onMenuLinkClick(e) {
-//    const menuLink = e.target;
-//    if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-//        const gotoBlock = document.querySelector(menuLink.dataset.goto);
-//        const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector('header').offsetHeight;
-//      
-//        window.scrollTo({
-//        top:gotoBlockValue,
-//        behavior: "smooth"
-//      });
-//      e.preventDefault();
-//    }
-//  }
-//}
-//------------------------------------------------------------------------Прокрутка при клике
-
 //------------------------------------------------------------------------Слайдеры
 // Находим все слайдеры на странице
 const sliders = document.querySelectorAll('.slider');
@@ -303,12 +270,45 @@ oneSlide.forEach((oneSlide, index) => {
 });
 //------------------------------------------------------------------------Слайдеры
 
+//-----------------------------------------------------------------------поиск врачей по словам
+document.getElementById('searchInput').addEventListener('input', function() {
+  const searchText = this.value.toLowerCase(); // Получаем текст из инпута и приводим к нижнему регистру
+  const doctorItems = document.querySelectorAll('.filter__item a, .filter__item h3'); // Находим все элементы p и h3 внутри .filter__item
+
+  let hasMatches = false; // Флаг для проверки наличия совпадений
+
+  doctorItems.forEach(item => {
+    const itemText = item.textContent.toLowerCase(); // Получаем текст элемента и приводим к нижнему регистру
+    if (searchText === '' || !itemText.includes(searchText)) {
+      // Если инпут пустой или текст не совпадает, убираем highlight и добавляем opacity: 0.5
+      item.classList.remove('filter-view');
+      item.style.opacity = '0.5';
+    } else {
+      // Если текст совпадает, добавляем highlight и убираем opacity
+      item.classList.add('filter-view');
+      item.style.opacity = '1';
+      hasMatches = true; // Устанавливаем флаг, что есть совпадения
+    }
+  });
+  // Если инпут пустой, возвращаем всем элементам opacity: 1
+  if (searchText === '') {
+    doctorItems.forEach(item => {
+      item.style.opacity = '1';
+    });
+  }
+});
+//-----------------------------------------------------------------------поиск врачей по словам
+
 
 //-----------------------------------------------------------------------сортировка по атрибутам
 
 class FilterGallery {
-  
   constructor() {
+    // Проверяем, существует ли элемент с классом filtermenu
+    if (!document.querySelector('.filtermenu')) {
+      return; // Если нет, прекращаем выполнение
+    }
+
     // Находим элементы меню и контейнер с постами
     this.filterMenuList = document.querySelectorAll('.filtermenu__list li');
     this.container = document.querySelector('.filtermenu__container');
@@ -353,7 +353,10 @@ class FilterGallery {
   }
 }
 
-const filterGallery = new FilterGallery();
+// Создаем экземпляр FilterGallery только если есть элемент с классом filtermenu
+if (document.querySelector('.filtermenu')) {
+  const filterGallery = new FilterGallery();
+}
 
 
 //-----------------------------------------------------------------------сортировка по атрибутам

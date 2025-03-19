@@ -1,10 +1,8 @@
 /*----------------------------------breadcrumbs--------------------------------*/
 .breadcrumbs {
-    margin-bottom: 40px;
     margin-top: 150px;
     @include table {
         margin-top: 90px;
-        margin-bottom: 20px;
     }
     &__list {
         display: flex;

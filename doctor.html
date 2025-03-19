@@ -23,7 +23,7 @@
 </head>
 <body id="body">
   <div class="wrapper">
-    <header class="header lock-padding">
+    <header class="header">
       <div class="header__content _container">
         <div class="header__body">
           <div class="header__links">
@@ -470,7 +470,6 @@
             <div class="calendar__wrapper section-color">
               <div class="calendar__top">
                 <div class="calendar__specialization">
-                  <p>
                     Выбрать специальность:
                     <div class="dropdown">
                       <button class="dropdown__button">онколог-хирург</button>
@@ -482,7 +481,6 @@
                       </ul>
                       <input type="text" name="select-category" value="" class="dropdown__input_hidden">
                     </div>
-                  </p>
                 </div>
                 <div class="calendar__cost">
                   <p>
@@ -642,10 +640,10 @@
             </div>
           </div>
           <div class="doctor__links">
-            <a class="doctor__link" href="#!">видео</a>
-            <a class="doctor__link" href="#!">отзывы</a>
-            <a class="doctor__link" href="#!">другие специалисты</a>
-            <a class="doctor__link" href="#!">лицензии</a>
+            <a class="doctor__link" href="#reviews">видео</a>
+            <a class="doctor__link" href="#section-tabs">отзывы</a>
+            <a class="doctor__link" href="#doctors">другие специалисты</a>
+            <a class="doctor__link" href="#callback">лицензии</a>
           </div>
         </div>
       </section>
@@ -1041,17 +1039,17 @@
         </div>
       </section>
 
-      <section class="reviews">
+      <section class="reviews" id="reviews">
         <div class="reviews__content _container">
           <div class="title">
             <h2>Видео с врачом</h2>
           </div>
           <div class="slider__wrap">
             <div class="slider__buttons">
-              <div class="swiper-button-prev swiper-button-prev-3">
+              <div class="swiper-button-prev swiper-button-prev-1">
                 <img src="images/icons/Arrow-Right.svg" alt="arrow">
               </div>
-              <div class="swiper-button-next swiper-button-next-3">
+              <div class="swiper-button-next swiper-button-next-1">
                 <img src="images/icons/Arrow-Right.svg" alt="arrow">
               </div>
             </div>
@@ -1265,7 +1263,7 @@
         </div>
       </section>
 
-      <section class="section-tabs section-color">
+      <section class="section-tabs section-color" id="section-tabs">
         <div class="section-tabs__content _container">
           <div class="tabs">
             <input type="radio" name="tabs" id="tab-1" checked>
@@ -1479,17 +1477,17 @@
         </div>
       </section>
 
-      <section class="doctors">
+      <section class="doctors" id="doctors">
         <div class="doctors__content _container">
           <div class="title">
-            <h2>Врачи клиники</h2>
+            <h2>Другие специалисты клиники</h2>
           </div>
           <div class="slider__wrap">
             <div class="slider__buttons">
-              <div class="swiper-button-prev swiper-button-prev-1">
+              <div class="swiper-button-prev swiper-button-prev-3">
                 <img src="images/icons/Arrow-Right.svg" alt="arrow">
               </div>
-              <div class="swiper-button-next swiper-button-next-1">
+              <div class="swiper-button-next swiper-button-next-3">
                 <img src="images/icons/Arrow-Right.svg" alt="arrow">
               </div>
             </div>
@@ -1511,7 +1509,7 @@
                         </div>
                       </a>
                       <div class="card__link">
-                        <a class="button button-filled-primary" href="#!">
+                        <a class="button button-filled-primary" href="doctor.html">
                           запись
                           <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.6667 5.81706L1.66675 5.81706" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -1520,7 +1518,7 @@
                         </a>
                       </div>
                     </div>
-                    <a class="card__name" href="#!">Сергеев Пётр Сергеевич</a>
+                    <a class="card__name" href="doctor.html">Сергеев Пётр Сергеевич</a>
                     <div class="card__post">
                       <p>Главный врач, онколог-хирург</p>
                     </div>
@@ -1536,7 +1534,7 @@
                 <div class="swiper-slide">
                   <div class="card">
                     <div class="card__inner _ibg">
-                      <a class="card__photo" href="#!">
+                      <a class="card__photo" href="doctor.html">
                         <picture>
                           <source media="(max-width: 768px)" srcset="images/doctor-photo2.webp">
                           <img src="images/doctor-photo2@2x.webp" alt="Сергеев Пётр Сергеевич">
@@ -1558,7 +1556,7 @@
                         </a>
                       </div>
                     </div>
-                    <a class="card__name" href="#!">Труханов Петр Александрович</a>
+                    <a class="card__name" href="doctor.html">Труханов Петр Александрович</a>
                     <div class="card__post">
                       <p>Заведующий стационаром, невролог</p>
                     </div>
@@ -1574,7 +1572,7 @@
                 <div class="swiper-slide">
                   <div class="card">
                     <div class="card__inner _ibg">
-                      <a class="card__photo" href="#!">
+                      <a class="card__photo" href="doctor.html">
                         <picture>
                           <source media="(max-width: 768px)" srcset="images/doctor-photo3.webp">
                           <img src="images/doctor-photo3@2x.webp" alt="Сергеев Пётр Сергеевич">
@@ -1596,7 +1594,7 @@
                         </a>
                       </div>
                     </div>
-                    <a class="card__name" href="#!">Джавадова Парвина Аязовна</a>
+                    <a class="card__name" href="doctor.html">Джавадова Парвина Аязовна</a>
                     <div class="card__post">
                       <p>Онкология, химиотерапия</p>
                     </div>
@@ -1612,7 +1610,7 @@
                 <div class="swiper-slide">
                   <div class="card">
                     <div class="card__inner _ibg">
-                      <a class="card__photo" href="#!">
+                      <a class="card__photo" href="doctor.html">
                         <picture>
                           <source media="(max-width: 768px)" srcset="images/doctor-photo1.webp">
                           <img src="images/doctor-photo1@2x.webp" alt="Сергеев Пётр Сергеевич">
@@ -1634,7 +1632,7 @@
                         </a>
                       </div>
                     </div>
-                    <a class="card__name" href="#!">Сергеев Пётр Сергеевич</a>
+                    <a class="card__name" href="doctor.html">Сергеев Пётр Сергеевич</a>
                     <div class="card__post">
                       <p>Главный врач, онколог-хирург</p>
                     </div>
@@ -1650,7 +1648,7 @@
                 <div class="swiper-slide">
                   <div class="card">
                     <div class="card__inner _ibg">
-                      <a class="card__photo" href="#!">
+                      <a class="card__photo" href="doctor.html">
                         <picture>
                           <source media="(max-width: 768px)" srcset="images/doctor-photo2.webp">
                           <img src="images/doctor-photo2@2x.webp" alt="Сергеев Пётр Сергеевич">
@@ -1672,7 +1670,7 @@
                         </a>
                       </div>
                     </div>
-                    <a class="card__name" href="#!">Труханов Петр Александрович</a>
+                    <a class="card__name" href="doctor.html">Труханов Петр Александрович</a>
                     <div class="card__post">
                       <p>Заведующий стационаром, невролог</p>
                     </div>
@@ -1688,7 +1686,7 @@
                 <div class="swiper-slide">
                   <div class="card">
                     <div class="card__inner _ibg">
-                      <a class="card__photo" href="#!">
+                      <a class="card__photo" href="doctor.html">
                         <picture>
                           <source media="(max-width: 768px)" srcset="images/doctor-photo3.webp">
                           <img src="images/doctor-photo3@2x.webp" alt="Сергеев Пётр Сергеевич">
@@ -1710,7 +1708,7 @@
                         </a>
                       </div>
                     </div>
-                    <a class="card__name" href="#!">Джавадова Парвина Аязовна</a>
+                    <a class="card__name" href="doctor.html">Джавадова Парвина Аязовна</a>
                     <div class="card__post">
                       <p>Онкология, химиотерапия</p>
                     </div>
@@ -1726,19 +1724,10 @@
               </div>
             </div>
           </div>
-          <div class="doctors__button">
-            <a class="button button-outline" href="#!">
-              все врачи
-              <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.1665 5.81706L1.1665 5.81706" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M7.1333 1.80083L11.1666 5.81683L7.1333 9.8335" stroke="#00A7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </a>
-          </div>
         </div>
       </section>
 
-      <section class="callback">
+      <section class="callback" id="callback">
         <div class="callback__content _container callback__content--mod">
           <div class="callback__wrapper">
             <div class="callback__body">

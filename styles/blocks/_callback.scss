@@ -50,10 +50,11 @@
         }
         @include mobile {
             flex-wrap: wrap;
+            padding: 20px 20px 0px 20px;
         }
     }
     &__info {
-        flex-basis: 505px;
+        flex-basis: 550px;
         color: var(--color-white);
         p {
             margin-bottom: 24px;

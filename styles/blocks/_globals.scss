@@ -2,6 +2,9 @@
 body.lock {
     overflow: hidden;
 }
+html {
+    scroll-padding-top: 100px;
+}
 body { 
     font-family: var(--font-family-base); 
     @include fluid-text(14, 17);
@@ -349,3 +352,13 @@ section {
 }
 
 /*----------------------------------global--------------------------------*/
+
+
+.list-link {
+    .menu__libk {
+        text-decoration: none;
+        color: var(--color-black);
+        display: block;
+        margin-bottom: 10px;
+    }
+}
